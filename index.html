@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>T&amp;J Exterior Maintenance · Fall cleanups &amp; pressure washing, Ocean County NJ</title>
+<meta name="description" content="Leaf cleanup, gutter cleaning and pressure washing across Ocean &amp; Monmouth County, NJ. Free quotes: (732) 644-6757.">
+<meta name="theme-color" content="#16263a">
+<meta property="og:title" content="T&amp;J Exterior Maintenance">
+<meta property="og:description" content="Fall cleanups and pressure washing for Ocean &amp; Monmouth County homes. Free quotes.">
+<style>
+/* ===== Tokens ===== */
+:root{
+  --navy:#16263a;      /* dusk ground, from their site's dark navy */
+  --navy-2:#1d3149;
+  --navy-3:#0f1c2b;    /* footer, still blue, never black */
+  --ink:#16263a;
+  --cream:#f3eee5;     /* clean concrete daylight */
+  --cream-2:#e7e0d3;
+  --concrete:#cbc6bb;
+  --orange:#e8892b;    /* their orange accent = the leaf */
+  --orange-hi:#f29a3f;
+  --rust:#b5502a;
+  --gold:#e6b44a;
+  --mist:#cfe3f0;
+  --text-on-dark:#f3eee5;
+  --muted-on-dark:#b7c3d1;
+  --muted-on-light:#4f5b69;
+  --radius:18px;
+  --gutter:20px;
+  --btn-h:56px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+/* ===== Base ===== */
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--navy);color:var(--text-on-dark);font:400 17px/1.55 var(--font);overflow-x:hidden}
+::selection{background:var(--orange);color:var(--navy)}
+input,select,textarea{caret-color:var(--orange)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:10px}
+h1,h2,h3{font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.98;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 var(--gutter)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ===== Buttons (one component, two fills, same outline + height) ===== */
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:var(--btn-h);padding:0 22px;border-radius:999px;border:2px solid var(--orange);font:800 17px/1 var(--font);text-decoration:none;cursor:pointer;transition:transform .25s cubic-bezier(.16,1,.3,1),background-color .2s,box-shadow .25s;-webkit-tap-highlight-color:transparent;user-select:none}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--orange);color:var(--navy);box-shadow:0 8px 18px -10px rgba(6,14,24,.55)}
+.btn-ghost{background:rgba(22,38,58,.55);color:var(--text-on-dark)}
+.on-light .btn-ghost{background:transparent;color:var(--ink)}
+@media (hover:hover){
+  .btn-primary:hover{background:var(--orange-hi);transform:translateY(-2px)}
+  .btn-ghost:hover{background:rgba(232,137,43,.14);transform:translateY(-2px)}
+}
+.btn .num{font-weight:700;opacity:.85}
+
+/* ===== Top bar ===== */
+.top{position:sticky;top:0;z-index:30;background:rgba(22,38,58,.88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.mark{display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--text-on-dark)}
+.mark b{font-weight:900;font-size:24px;letter-spacing:-.03em;color:var(--orange)}
+.mark span{font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;line-height:1.1}
+.top-call{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:999px;border:2px solid rgba(232,137,43,.6);text-decoration:none;font-weight:800;font-size:15px}
+.top-call .t{display:none}
+@media (min-width:760px){.top-call .t{display:inline}}
+
+/* ===== Hero ===== */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#24405f 0%,var(--navy) 55%)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-copy{position:relative;z-index:2;padding-top:22px;pointer-events:none}
+.hero-copy a,.hero-copy button{pointer-events:auto}
+.hero h1{font-size:clamp(2.35rem,10.6vw,5.4rem);max-width:12ch}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.pitch{margin-top:14px;font-size:clamp(16px,4.5vw,20px);line-height:1.4;color:var(--muted-on-dark);max-width:36ch}
+.pitch strong{color:var(--text-on-dark);font-weight:700}
+.cta{display:grid;gap:12px;margin-top:22px}
+.slab-space{height:clamp(170px,30vh,330px);position:relative;touch-action:pan-y}
+.hint{position:absolute;left:var(--gutter);bottom:18px;z-index:3;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(22,38,58,.78);font-size:14px;font-weight:700;color:var(--text-on-dark);pointer-events:none;transition:opacity .6s}
+.hint.gone{opacity:0}
+.hint svg{width:18px;height:18px}
+@media (min-width:760px){
+  .hero-copy{padding-top:64px}
+  .cta{grid-template-columns:auto auto;justify-content:start;gap:14px}
+  .cta .btn{padding:0 30px}
+  .hint{left:max(var(--gutter),calc((100% - 1180px)/2 + var(--gutter)))}
+}
+
+/* ===== Seams (animated wet edges between sections) ===== */
+.seam{display:block;width:100%;height:46px;margin:-23px 0;position:relative;z-index:4;pointer-events:none}
+
+/* ===== Section shell ===== */
+section{position:relative}
+.sec{padding:64px 0 72px}
+.on-light{background:var(--cream);color:var(--ink)}
+.sec h2{font-size:clamp(2rem,8.4vw,3.8rem)}
+.lede{margin-top:12px;font-size:18px;max-width:46ch}
+.on-light .lede{color:var(--muted-on-light)}
+.on-dark .lede{color:var(--muted-on-dark)}
+
+/* ===== Services ===== */
+.svc{margin-top:28px;display:grid;gap:0;border-top:2px solid var(--cream-2)}
+.row{display:grid;grid-template-columns:1fr 44px;align-items:center;gap:14px;padding:20px 2px;border-bottom:2px solid var(--cream-2);text-decoration:none;color:var(--ink);-webkit-tap-highlight-color:transparent}
+.row h3{font-size:22px;letter-spacing:-.01em}
+.row p{margin-top:6px;font-size:16px;color:var(--muted-on-light);line-height:1.45}
+.row .go{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:var(--cream);transition:transform .3s cubic-bezier(.16,1,.3,1),background-color .2s}
+.row .go svg{width:20px;height:20px}
+.row.fall{background:linear-gradient(90deg,rgba(232,137,43,.16),rgba(232,137,43,0) 80%);margin:0 calc(var(--gutter)*-1);padding-left:calc(var(--gutter) + 2px);padding-right:var(--gutter)}
+.row.fall .go{background:var(--orange);color:var(--navy)}
+.tag{display:inline-block;margin-left:8px;padding:3px 9px;border-radius:999px;background:var(--orange);color:var(--navy);font-size:13px;font-weight:900;letter-spacing:.04em;vertical-align:4px}
+@media (hover:hover){.row:hover .go{transform:translateX(4px) scale(1.06);background:var(--orange);color:var(--navy)}}
+@media (min-width:900px){
+  .svc-grid{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+  .svc{margin-top:0}
+  .svc-grid .intro{position:sticky;top:100px}
+  .row.fall{margin:0;padding-left:16px}
+}
+
+/* ===== Quote builder ===== */
+.on-dark{background:var(--navy-2);color:var(--text-on-dark)}
+.steps{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:14px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;font-size:17px;color:var(--muted-on-dark)}
+.steps li b{display:block;color:var(--text-on-dark);font-weight:800}
+.steps li::before{counter-increment:s;content:counter(s);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--orange);color:var(--navy);font-weight:900}
+.quote{margin-top:34px;background:var(--cream);color:var(--ink);border-radius:24px;padding:22px 18px 24px;box-shadow:0 24px 50px -24px rgba(5,12,22,.7)}
+.quote h3{font-size:24px}
+.field{margin-top:18px}
+.field>label,.legend{display:block;font-weight:800;font-size:16px;margin-bottom:8px}
+.field .opt{font-weight:500;color:var(--muted-on-light)}
+.quote input[type=text],.quote input[type=tel],.quote select,.quote textarea{width:100%;min-height:52px;padding:12px 14px;border-radius:14px;border:2px solid #cfc7b8;background:#fffdf8;color:var(--ink);font:500 17px/1.3 var(--font);-webkit-appearance:none;appearance:none}
+.quote select{background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+.quote textarea{min-height:96px;resize:vertical}
+.quote input:focus,.quote select:focus,.quote textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 4px rgba(232,137,43,.25)}
+.quote ::placeholder{color:#6d7480}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.chip span{display:flex;align-items:center;min-height:46px;padding:0 16px;border-radius:999px;border:2px solid #cfc7b8;background:#fffdf8;font-weight:700;font-size:16px;cursor:pointer;user-select:none;transition:background-color .2s,border-color .2s,transform .2s cubic-bezier(.16,1,.3,1)}
+.chip input:checked+span{background:var(--navy);border-color:var(--navy);color:var(--cream)}
+.chip input:focus-visible+span{outline:3px solid var(--orange);outline-offset:2px}
+.chip span:active{transform:scale(.96)}
+.err{display:none;margin-top:8px;color:#a3361b;font-weight:700;font-size:15px}
+.bad .err{display:block}
+.bad input,.bad select{border-color:#c4502a}
+.photos{margin-top:20px;display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:14px;background:var(--cream-2);font-size:15px;color:#3a4552}
+.photos svg{color:var(--rust);margin-top:2px}
+.send{display:grid;gap:12px;margin-top:20px}
+.send .btn-ghost{background:transparent;color:var(--ink)}
+.after{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:15px;color:var(--muted-on-light)}
+.after a,.after button{color:var(--ink);font:700 15px/1 var(--font);background:none;border:0;padding:0;min-height:44px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--orange);cursor:pointer}
+.ticket{margin-top:18px;padding:14px 16px;border-radius:14px;border:2px dashed #cfc7b8;font-size:15px;line-height:1.5;white-space:pre-wrap;color:#3a4552;display:none}
+.ticket.show{display:block;animation:tk .5s cubic-bezier(.16,1,.3,1)}
+@keyframes tk{from{opacity:0;transform:translateY(-6px)}}
+@media (min-width:900px){
+  .q-grid{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+  .quote{margin-top:0;padding:34px 34px 34px}
+  .send{grid-template-columns:1fr 1fr}
+}
+
+/* ===== Area + promises ===== */
+.area canvas,.close canvas{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
+.area .wrap,.close .wrap{position:relative;z-index:2}
+.towns{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 10px}
+.towns li{padding:8px 14px;border-radius:999px;background:#fffdf8;border:2px solid var(--cream-2);font-weight:700;font-size:16px}
+.counties{margin-top:16px;font-weight:800;color:var(--rust)}
+.promises{margin-top:44px;display:grid;gap:22px}
+.promise{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.promise .dot{width:44px;height:44px;border-radius:50%;background:var(--navy);color:var(--orange);display:grid;place-items:center}
+.promise b{display:block;font-size:19px;font-weight:900;text-transform:uppercase;letter-spacing:-.01em}
+.promise p{color:var(--muted-on-light);font-size:16px}
+.quoteline{margin-top:40px;font-size:clamp(1.5rem,6.2vw,2.4rem);font-weight:900;line-height:1.08;letter-spacing:-.02em;text-transform:uppercase;max-width:20ch}
+.quoteline small{display:block;margin-top:10px;font:600 15px/1.4 var(--font);text-transform:none;letter-spacing:0;color:var(--muted-on-light)}
+@media (min-width:900px){
+  .area-grid{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:start}
+  .promises{margin-top:0}
+}
+
+/* ===== Close ===== */
+.close{background:linear-gradient(0deg,#223c5a 0%,var(--navy) 60%);padding:84px 0 96px;overflow:hidden}
+.close h2{font-size:clamp(2.3rem,10vw,5rem);max-width:14ch}
+.close h2 span{color:var(--orange)}
+.close .lede{color:var(--muted-on-dark)}
+.close .cta{margin-top:28px}
+.hours{margin-top:22px;display:flex;align-items:center;gap:10px;color:var(--muted-on-dark);font-weight:700}
+
+/* ===== Footer ===== */
+footer{background:var(--navy-3);color:var(--muted-on-dark);padding:36px 0 120px;font-size:15px}
+footer .wrap{display:grid;gap:8px}
+footer b{color:var(--text-on-dark)}
+footer a{text-decoration-color:var(--orange);text-underline-offset:3px}
+.demo{margin-top:12px;font-weight:800;color:var(--orange)}
+@media (min-width:760px){footer{padding-bottom:40px}}
+
+/* ===== Sticky thumb bar (phones) ===== */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(15,28,43,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transform:translateY(110%);transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.bar.on{transform:none}
+.bar .btn{min-height:52px;font-size:16px;padding:0 10px}
+@media (min-width:760px){.bar{display:none}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+<!--
+THESIS: The proof is the wash. No borrowed before/after photos: the visitor drags a finger across a grimy driveway slab and makes the "after" themselves, while fall leaves drop and get blown off. Refuses the stock-hero + icon-card template their lovable.app site ships.
+OWN-WORLD: Dusk on a Jersey Shore driveway. Navy ground (their site's), orange = their accent = the fall leaf, clean-concrete cream for daylight sections. Heavy uppercase system-stack headlines, pill buttons with one shared outline, wet-edge water seams between sections, leaves that fall and settle in every dark-to-light zone.
+STORY: Owner sees their fall offer and their own services, done properly; homeowner understands "leaves, gutters, pressure washing, my town, free quote" and sends a quote request with photos in under a minute.
+FIRST VIEWPORT (phone 390): wordmark + call pill; 3-line headline "Leaves gone. Gutters clear. Driveway clean."; one-line pitch; full-width "Get a free quote" + "Call (732) 644-6757"; washable slab with leaves directly beneath.
+FORM: Grounded list #1 (pressure-wash slab + leaf fall), chosen by Ellie's pitch-site rule over roll index 6; seed d1de46cf. Code-led.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.2l1.6 4.2-2.2 1.5a11 11 0 0 0 7.2 7.2l1.5-2.2 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.5 16.5 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-msg" viewBox="0 0 24 24"><path d="M4 5.5h16v10.5H10l-4.5 3.5V16H4z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3.5 6h17v12h-17z"/><path d="M4 6.5l8 6.5 8-6.5"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11m0-1.5a1.5 1.5 0 0 1 3 0V11m0-.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-.6a6 6 0 0 1-4.8-2.4L4 15.5a1.6 1.6 0 0 1 2.4-2L9 15.5"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><path d="M3.5 8h4l1.6-2.5h5.8L16.5 8h4v11h-17z"/><circle cx="12" cy="13.2" r="3.4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z"/><path d="M8.6 12l2.4 2.4 4.4-4.6"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 11L12 4l8.5 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5.5h4V20"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.5 12.5V4h8.5l8.5 8.5-8.5 8.5z"/><circle cx="8" cy="8.5" r="1.4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="T&amp;J Exterior Maintenance, back to top"><b>T&amp;J</b><span>Exterior<br>Maintenance</span></a>
+    <a class="top-call" href="tel:+17326446757"><svg class="i"><use href="#i-phone"/></svg><span class="t">(732) 644-6757</span><span class="sr">Call T&amp;J</span></a>
+  </div>
+</header>
+
+<main id="top">
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero" aria-label="Intro">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero-copy wrap">
+    <h1>Leaves gone. Gutters clear. <em>Driveway clean.</em></h1>
+    <p class="pitch">Fall cleanups and pressure washing for <strong>Ocean &amp; Monmouth County</strong> homes. Free quotes, Mon–Sat.</p>
+    <div class="cta" id="heroCta">
+      <a class="btn btn-primary" href="#quote">Get a free quote <svg class="i"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="tel:+17326446757"><svg class="i"><use href="#i-phone"/></svg>Call <span class="num">(732) 644-6757</span></a>
+    </div>
+  </div>
+  <div class="slab-space" id="slab" role="img" aria-label="A dirty concrete driveway you can wash clean by dragging across it, with fall leaves landing on it">
+    <div class="hint" id="hint"><svg class="i"><use href="#i-hand"/></svg>Drag across the driveway to wash it</div>
+  </div>
+</section>
+
+<svg class="seam" data-seam data-top="#16263a" data-bottom="#f3eee5" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"></svg>
+
+<!-- ===== SERVICES ===== -->
+<section class="sec on-light" id="services" aria-labelledby="svc-h">
+  <div class="wrap svc-grid">
+    <div class="intro">
+      <h2 id="svc-h">Everything outside the front door</h2>
+      <p class="lede">From this fall's leaf pile to the black streaks on the siding. Tap a service to start a quote with it already picked.</p>
+    </div>
+    <div class="svc">
+      <a class="row fall" href="#quote" data-pick="leaf,gutter">
+        <div><h3>Fall cleanup <span class="tag">This season</span></h3><p>Leaf cleanup &amp; disposal · Gutter cleaning</p></div>
+        <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" href="#quote" data-pick="concrete">
+        <div><h3>Driveways &amp; concrete</h3><p>Driveways · Sidewalks · Patios · Pool areas · Garage floors</p></div>
+        <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" href="#quote" data-pick="house">
+        <div><h3>House washing</h3><p>Vinyl · Stucco · Brick · Siding · Trim · Black streak removal · Algae treatment · Moss removal · Low-pressure cleaning</p></div>
+        <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" href="#quote" data-pick="pavers">
+        <div><h3>Pavers</h3><p>Pressure washing · Polymeric sanding · Sealing · Joint repair</p></div>
+        <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" href="#quote" data-pick="wood">
+        <div><h3>Decks &amp; wood</h3><p>Wood brightening · Sanding · Staining</p></div>
+        <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" href="#quote" data-pick="commercial">
+        <div><h3>Commercial</h3><p>Storefronts · Apartment complexes · HOAs · Parking lots · Fleet washing</p></div>
+        <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<svg class="seam" data-seam data-top="#f3eee5" data-bottom="#1d3149" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"></svg>
+
+<!-- ===== QUOTE ===== -->
+<section class="sec on-dark" id="quote" aria-labelledby="q-h">
+  <div class="wrap q-grid">
+    <div>
+      <h2 id="q-h">Free quote in about a minute</h2>
+      <p class="lede">Tell T&amp;J what needs doing and send a few photos. No account, no waiting on hold.</p>
+      <ol class="steps">
+        <li><span><b>Pick what needs doing</b>Leaves, gutters, the driveway, the siding: as many as you like.</span></li>
+        <li><span><b>Send it with photos</b>Your message opens ready to go. Add a few photos of the job before you hit send.</span></li>
+        <li><span><b>Get your free estimate</b>T&amp;J replies with a price for the work.</span></li>
+      </ol>
+    </div>
+
+    <form class="quote" id="quoteForm" novalidate>
+      <h3>Your quote request</h3>
+
+      <div class="field" id="f-svc">
+        <span class="legend" id="svc-legend">What needs doing?</span>
+        <div class="chips" role="group" aria-labelledby="svc-legend">
+          <label class="chip"><input type="checkbox" name="svc" value="leaf" data-label="Leaf cleanup &amp; disposal"><span>Leaf cleanup</span></label>
+          <label class="chip"><input type="checkbox" name="svc" value="gutter" data-label="Gutter cleaning"><span>Gutters</span></label>
+          <label class="chip"><input type="checkbox" name="svc" value="concrete" data-label="Driveway / concrete washing"><span>Driveway &amp; concrete</span></label>
+          <label class="chip"><input type="checkbox" name="svc" value="house" data-label="House washing"><span>House wash</span></label>
+          <label class="chip"><input type="checkbox" name="svc" value="pavers" data-label="Pavers (wash, sand, seal)"><span>Pavers</span></label>
+          <label class="chip"><input type="checkbox" name="svc" value="wood" data-label="Deck / wood (brighten, sand, stain)"><span>Deck &amp; wood</span></label>
+          <label class="chip"><input type="checkbox" name="svc" value="commercial" data-label="Commercial property"><span>Commercial</span></label>
+          <label class="chip"><input type="checkbox" name="svc" value="other" data-label="Something else"><span>Something else</span></label>
+        </div>
+        <p class="err" id="e-svc">Pick at least one service so T&amp;J knows what to quote.</p>
+      </div>
+
+      <div class="field" id="f-name">
+        <label for="q-name">Your name</label>
+        <input id="q-name" type="text" autocomplete="name" placeholder="First name is fine" aria-describedby="e-name">
+        <p class="err" id="e-name">Add your name so T&amp;J knows who's asking.</p>
+      </div>
+
+      <div class="field" id="f-phone">
+        <label for="q-phone">Best number to reach you</label>
+        <input id="q-phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(732) 555-0123" aria-describedby="e-phone">
+        <p class="err" id="e-phone">Add a phone number with area code (10 digits) so T&amp;J can call or text back.</p>
+      </div>
+
+      <div class="field" id="f-town">
+        <label for="q-town">Town</label>
+        <select id="q-town" aria-describedby="e-town">
+          <option value="">Choose your town</option>
+          <option>Toms River</option><option>Brick</option><option>Point Pleasant</option><option>Lakewood</option><option>Jackson</option><option>Manchester</option><option>Seaside Heights</option><option>Lavallette</option><option>Bay Head</option><option>Mantoloking</option><option>Forked River</option><option>Beachwood</option><option>Ocean Gate</option><option>Lacey</option><option>Wall Township</option><option>Howell</option><option>Freehold</option>
+          <option value="Other">Somewhere else nearby</option>
+        </select>
+        <p class="err" id="e-town">Choose your town, or "Somewhere else nearby".</p>
+      </div>
+
+      <div class="field">
+        <label for="q-notes">Anything T&amp;J should know? <span class="opt">(optional)</span></label>
+        <textarea id="q-notes" placeholder="Two-car driveway, gutters on a two-story house, hoping to get it done before Thanksgiving..."></textarea>
+      </div>
+
+      <div class="photos"><svg class="i"><use href="#i-cam"/></svg><span>Photos help T&amp;J price it right. Your message app opens next: attach a few pictures of the job there before you send.</span></div>
+
+      <div class="send">
+        <a class="btn btn-primary" id="sendText" href="sms:+17326446757"><svg class="i"><use href="#i-msg"/></svg>Send by text</a>
+        <a class="btn btn-ghost" id="sendMail" href="mailto:tjexteriormaintenance@gmail.com"><svg class="i"><use href="#i-mail"/></svg>Send by email</a>
+      </div>
+      <div class="after">
+        <button type="button" id="copyMsg">Copy the message</button>
+        <a href="tel:+17326446757">Or just call (732) 644-6757</a>
+      </div>
+      <p class="sr" id="copyStatus" aria-live="polite"></p>
+      <div class="ticket" id="ticket" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<svg class="seam" data-seam data-top="#1d3149" data-bottom="#f3eee5" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"></svg>
+
+<!-- ===== AREA + PROMISES ===== -->
+<section class="sec on-light area" id="area" aria-labelledby="a-h">
+  <canvas id="areaCanvas" aria-hidden="true"></canvas>
+  <div class="wrap area-grid">
+    <div>
+      <h2 id="a-h">Local to the shore</h2>
+      <p class="lede">Homes and businesses across Ocean &amp; Monmouth County, including:</p>
+      <ul class="towns">
+        <li>Toms River</li><li>Brick</li><li>Point Pleasant</li><li>Lakewood</li><li>Jackson</li><li>Manchester</li><li>Seaside Heights</li><li>Lavallette</li><li>Bay Head</li><li>Mantoloking</li><li>Forked River</li><li>Beachwood</li><li>Ocean Gate</li><li>Lacey</li><li>Wall Township</li><li>Howell</li><li>Freehold</li>
+      </ul>
+      <p class="counties">Not on the list? Ask anyway.</p>
+    </div>
+    <div class="promises">
+      <div class="promise"><span class="dot"><svg class="i"><use href="#i-shield"/></svg></span><div><b>Fully insured</b><p>Your property is covered while the crew works.</p></div></div>
+      <div class="promise"><span class="dot"><svg class="i"><use href="#i-home"/></svg></span><div><b>Locally owned</b><p>An Ocean County crew, not a franchise call center.</p></div></div>
+      <div class="promise"><span class="dot"><svg class="i"><use href="#i-tag"/></svg></span><div><b>Free estimates</b><p>Send the job, get a price. No charge to ask.</p></div></div>
+      <p class="quoteline">"We don't leave until you're happy."<small>T&amp;J's promise to every customer</small></p>
+    </div>
+  </div>
+</section>
+
+<svg class="seam" data-seam data-top="#f3eee5" data-bottom="#16263a" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"></svg>
+
+<!-- ===== CLOSE ===== -->
+<section class="close" id="close" aria-labelledby="c-h">
+  <canvas id="closeCanvas" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <h2 id="c-h">Restore your curb appeal <span>this fall.</span></h2>
+    <p class="lede">T&amp;J Exterior Maintenance. Leaf cleanup, gutters and pressure washing, Ocean &amp; Monmouth County.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#quote">Get a free quote <svg class="i"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="tel:+17326446757"><svg class="i"><use href="#i-phone"/></svg>Call <span class="num">(732) 644-6757</span></a>
+    </div>
+    <p class="hours"><svg class="i"><use href="#i-clock"/></svg>Mon–Sat · 7am–7pm</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>T&amp;J Exterior Maintenance</b>
+    <span>Ocean &amp; Monmouth County, NJ · Mon–Sat 7am–7pm</span>
+    <span><a href="tel:+17326446757">(732) 644-6757</a> · <a href="mailto:tjexteriormaintenance@gmail.com">tjexteriormaintenance@gmail.com</a></span>
+    <span class="demo">Demo one-pager — free sample.</span>
+  </div>
+</footer>
+
+<nav class="bar" id="bar" aria-label="Quick contact">
+  <a class="btn btn-ghost" href="tel:+17326446757"><svg class="i"><use href="#i-phone"/></svg>Call</a>
+  <a class="btn btn-primary" href="#quote">Free quote</a>
+</nav>
+
+<script>
+/* ===== Tunables ===== */
+var TUNE = {
+  leavesPhone: 16, leavesDesktop: 34,   // hero leaf count
+  zoneLeavesPhone: 7, zoneLeavesDesktop: 14,
+  brushPhone: 24, brushDesktop: 34,     // wash radius (css px)
+  regrow: 0.0022,                        // grime creep-back per frame (0 = stays clean)
+  wetFade: 0.012,                        // how fast the wet sheen dries
+  idleMs: 3200,                          // autopilot wand starts after this much stillness
+  blowRadius: 90, blowForce: 520,
+  seamSpeed: 1.0                         // wet-edge seams
+};
+var PHONE = window.matchMedia('(max-width: 759px)').matches;
+var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var BIZ = { phone: '+17326446757', email: 'tjexteriormaintenance@gmail.com', name: 'T&J' };
+
+/* ===== Shared pointer (mouse + finger) ===== */
+var P = { x: -9999, y: -9999, vx: 0, vy: 0, t: 0, active: false, user: 0 };
+(function(){
+  var lx = 0, ly = 0, lt = 0;
+  function move(x, y){
+    var now = performance.now(), dt = Math.max(8, now - lt);
+    if (lt && now - lt < 120) { P.vx = P.vx * .5 + (x - lx) / dt * 1000 * .5; P.vy = P.vy * .5 + (y - ly) / dt * 1000 * .5; }
+    else { P.vx = 0; P.vy = 0; }
+    P.x = x; P.y = y; lx = x; ly = y; lt = now; P.t = now; P.active = true; P.user = now;
+  }
+  window.addEventListener('pointermove', function(e){ if (e.pointerType === 'mouse') move(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchstart', function(e){ var t = e.touches[0]; lt = 0; move(t.clientX, t.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function(e){ var t = e.touches[0]; move(t.clientX, t.clientY); }, { passive: true });
+  window.addEventListener('touchend', function(){ P.active = false; }, { passive: true });
+  document.addEventListener('mouseleave', function(){ P.active = false; });
+})();
+
+/* ===== One loop for everything ===== */
+var Loop = (function(){
+  var items = [], running = false, last = 0;
+  function frame(now){
+    var dt = Math.min(0.05, (now - last) / 1000 || 0.016); last = now;
+    var any = false;
+    for (var i = 0; i < items.length; i++) if (items[i].visible) { items[i].tick(dt, now / 1000); any = true; }
+    if (!P.active && now - P.t > 120) { P.vx *= .9; P.vy *= .9; }
+    if (any) requestAnimationFrame(frame); else running = false;
+  }
+  function wake(){ if (!running && !REDUCED) { running = true; last = performance.now(); requestAnimationFrame(frame); } }
+  function add(item, el){
+    item.visible = true; items.push(item);
+    if ('IntersectionObserver' in window) new IntersectionObserver(function(es){ item.visible = es[0].isIntersecting; if (item.visible) wake(); }, { rootMargin: '80px' }).observe(el);
+    wake();
+  }
+  return { add: add };
+})();
+
+/* ===== Leaf sprites ===== */
+var LeafArt = (function(){
+  var colors = ['#e8892b', '#c9602a', '#e6b44a', '#a8462a', '#d97a1f', '#8a5a2b'];
+  var shapes = [
+    function(c){ c.beginPath(); c.moveTo(0,-15); c.bezierCurveTo(10,-9,11,6,0,15); c.bezierCurveTo(-11,6,-10,-9,0,-15); c.fill(); }, // oval leaf
+    function(c){ c.beginPath(); // maple-ish
+      var pts=[[0,-15],[3,-8],[9,-11],[7,-4],[14,-3],[8,2],[10,8],[3,6],[1,13],[-1,13],[-3,6],[-10,8],[-8,2],[-14,-3],[-7,-4],[-9,-11],[-3,-8]];
+      c.moveTo(pts[0][0],pts[0][1]); for (var i=1;i<pts.length;i++) c.lineTo(pts[i][0],pts[i][1]); c.closePath(); c.fill(); },
+    function(c){ c.beginPath(); // oak-ish lobes
+      c.moveTo(0,-15); c.quadraticCurveTo(8,-13,5,-8); c.quadraticCurveTo(11,-6,6,-1); c.quadraticCurveTo(12,3,5,6); c.quadraticCurveTo(8,12,0,15);
+      c.quadraticCurveTo(-8,12,-5,6); c.quadraticCurveTo(-12,3,-6,-1); c.quadraticCurveTo(-11,-6,-5,-8); c.quadraticCurveTo(-8,-13,0,-15); c.fill(); }
+  ];
+  var sprites = [];
+  shapes.forEach(function(draw){
+    colors.forEach(function(col){
+      var cv = document.createElement('canvas'), s = 64; cv.width = cv.height = s;
+      var c = cv.getContext('2d'); c.translate(s/2, s/2); c.scale(1.9, 1.9);
+      // body with a soft shaded side (no hairline glints)
+      c.fillStyle = col; draw(c);
+      var g = c.createLinearGradient(-14,-14,14,14); g.addColorStop(0,'rgba(255,240,200,.18)'); g.addColorStop(.55,'rgba(0,0,0,0)'); g.addColorStop(1,'rgba(40,15,0,.28)');
+      c.globalCompositeOperation = 'source-atop'; c.fillStyle = g; c.fillRect(-16,-16,32,32);
+      c.globalCompositeOperation = 'source-over';
+      c.strokeStyle = 'rgba(60,25,5,.35)'; c.lineWidth = .9; c.beginPath(); c.moveTo(0,-13); c.lineTo(0,17); c.stroke();
+      sprites.push(cv);
+    });
+  });
+  return sprites;
+})();
+
+/* ===== Leaf field (used by hero and the quieter zones) ===== */
+function LeafField(canvas, opts){
+  var ctx = canvas.getContext('2d'), dpr = Math.min(window.devicePixelRatio || 1, PHONE ? 1.75 : 2);
+  var W = 0, H = 0, leaves = [], self = this;
+  var floorTop = opts.floorTop || function(){ return H - 10; };
+  function rnd(a, b){ return a + Math.random() * (b - a); }
+  function spawn(l, anywhere){
+    l.x = rnd(0, W); l.y = anywhere ? rnd(-20, H * .9) : rnd(-60, -20);
+    l.vx = 0; l.vy = rnd(22, 46); l.s = rnd(.5, .9);
+    l.a = rnd(0, 6.28); l.va = rnd(-1.2, 1.2); l.flip = rnd(0, 6.28); l.vflip = rnd(1.4, 3.2);
+    l.ph = rnd(0, 100); l.f1 = rnd(.5, .9); l.f2 = rnd(1.3, 2.1); l.amp = rnd(14, 30);
+    l.img = LeafArt[(Math.random() * LeafArt.length) | 0];
+    l.rest = false; l.restY = rnd(floorTop(), H - 6); l.air = false;
+    return l;
+  }
+  function resize(){
+    var r = canvas.getBoundingClientRect(); W = r.width; H = r.height;
+    canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+    if (opts.onResize) opts.onResize(W, H, dpr);
+    leaves.forEach(function(l){ if (l.x > W) l.x = rnd(0, W); l.restY = rnd(floorTop(), H - 6); });
+  }
+  this.ctx = ctx; this.dpr = function(){ return dpr; }; this.size = function(){ return [W, H]; };
+  resize();
+  for (var i = 0; i < opts.count; i++) leaves.push(spawn({}, true));
+  // a few already resting so the first frame reads as "fall"
+  leaves.forEach(function(l, i){ if (i % 3 === 0) { l.y = l.restY; l.rest = true; } });
+  var rt; window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(resize, 120); });
+
+  this.blow = function(x, y, vx, vy, radius, force){
+    for (var i = 0; i < leaves.length; i++) {
+      var l = leaves[i], dx = l.x - x, dy = l.y - y, d = Math.sqrt(dx * dx + dy * dy);
+      if (d < radius && d > .01) {
+        var k = (1 - d / radius); k *= k;
+        l.vx += (dx / d * force + vx * .45) * k * .06;
+        l.vy += (dy / d * force + vy * .45) * k * .06 - force * k * .025;
+        l.va += (Math.random() - .5) * 18 * k; l.vflip += 6 * k;
+        l.rest = false; l.air = true;
+      }
+    }
+  };
+  this.tick = function(dt, t){
+    for (var i = 0; i < leaves.length; i++) {
+      var l = leaves[i];
+      if (l.rest) { l.flip += dt * .2; continue; }
+      if (l.air) {
+        // thrown: gravity + drag, settle back into a drifting fall
+        l.vy += 160 * dt; l.vx *= Math.pow(.25, dt); l.vy *= Math.pow(.35, dt);
+        if (Math.abs(l.vx) < 40 && l.vy > 0 && l.vy < 60) l.air = false;
+      } else {
+        // falling: layered sines, each leaf its own phase, amplitude swells over time
+        var sway = Math.sin(t * l.f1 + l.ph) * l.amp + Math.sin(t * l.f2 + l.ph * 1.7) * l.amp * .45;
+        sway *= .75 + .25 * Math.sin(t * .23 + l.ph);
+        l.vx += (sway - l.vx) * Math.min(1, dt * 2.2);
+        l.vy += ((34 + Math.sin(t * l.f2 + l.ph) * 14) - l.vy) * Math.min(1, dt * 1.5);
+      }
+      l.x += l.vx * dt; l.y += l.vy * dt;
+      l.a += l.va * dt; l.va *= Math.pow(.6, dt); l.va += Math.sin(t * l.f1 + l.ph) * dt * 1.4;
+      l.flip += l.vflip * dt; l.vflip += (2.2 - l.vflip) * dt * .5;
+      if (!l.air && l.y >= l.restY) { l.y = l.restY; l.rest = true; l.vx = l.vy = 0; }
+      if (l.x < -40 || l.x > W + 40 || l.y > H + 40) spawn(l, false);
+      if (l.y < -120) spawn(l, false);
+    }
+    // recycle: keep a bed but not a carpet
+    var resting = 0; for (i = 0; i < leaves.length; i++) if (leaves[i].rest) resting++;
+    if (resting > leaves.length * .7) { var pick = leaves[(Math.random() * leaves.length) | 0]; if (pick.rest && Math.random() < .02) { pick.rest = false; pick.air = true; pick.vy = -120; pick.vx = (Math.random() - .5) * 200; } }
+  };
+  this.draw = function(){
+    var c = ctx;
+    for (var i = 0; i < leaves.length; i++) {
+      var l = leaves[i], sz = 32 * l.s;
+      c.save(); c.translate(l.x * dpr, l.y * dpr); c.rotate(l.a);
+      c.scale(dpr, dpr * (l.rest ? .9 : Math.max(.18, Math.abs(Math.cos(l.flip)))));
+      if (l.rest) { c.globalAlpha = .9; }
+      c.drawImage(l.img, -sz / 2, -sz / 2, sz, sz);
+      c.restore();
+    }
+  };
+}
+
+/* ===== Hero: washable slab + leaves + spray ===== */
+(function(){
+  var canvas = document.getElementById('heroCanvas'), hero = document.getElementById('hero'), slabEl = document.getElementById('slab'), hint = document.getElementById('hint');
+  var base, grime, grimeSrc, wet, gctx, wctx, slab = { x: 0, y: 0, w: 0, h: 0 }, S = 0.5; // slab layers at half res
+  var drops = [], brush = PHONE ? TUNE.brushPhone : TUNE.brushDesktop;
+  var auto = { t: Math.random() * 10 }, washedByUser = false;
+
+  function noiseDots(c, w, h, n, cols, rmax){ for (var i = 0; i < n; i++) { c.fillStyle = cols[(Math.random() * cols.length) | 0]; var r = Math.random() * rmax + .4; c.fillRect(Math.random() * w, Math.random() * h, r, r); } }
+  function blob(c, x, y, r, col){ var g = c.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, col); g.addColorStop(1, 'rgba(0,0,0,0)'); c.fillStyle = g; c.beginPath(); c.arc(x, y, r, 0, 6.29); c.fill(); }
+  function joints(c, w, h, col, lw){
+    c.strokeStyle = col; c.lineWidth = lw; c.beginPath();
+    var panel = Math.max(120, w / Math.round(w / 230));
+    for (var x = panel * .62; x < w; x += panel) { c.moveTo(x, 0); c.lineTo(x + h * .18, h); }
+    c.moveTo(0, h * .55); c.lineTo(w, h * .58); c.stroke();
+  }
+  function buildLayers(w, h){
+    var cw = Math.max(2, Math.round(w * S)), ch = Math.max(2, Math.round(h * S));
+    base = document.createElement('canvas'); base.width = cw; base.height = ch;
+    var b = base.getContext('2d');
+    b.fillStyle = '#cdc8bd'; b.fillRect(0, 0, cw, ch);
+    noiseDots(b, cw, ch, cw * ch * .05, ['#bdb7ab', '#d8d3c9', '#c3bdb1', '#e0dbd2', '#aaa497'], 1.6);
+    joints(b, cw, ch, 'rgba(90,84,74,.55)', 2.2);
+    // the grime: fully opaque so creep-back is exact
+    grimeSrc = document.createElement('canvas'); grimeSrc.width = cw; grimeSrc.height = ch;
+    var g = grimeSrc.getContext('2d');
+    g.fillStyle = '#4c5240'; g.fillRect(0, 0, cw, ch);
+    for (var i = 0; i < cw * ch / 900; i++) blob(g, Math.random() * cw, Math.random() * ch, 10 + Math.random() * 40, ['rgba(38,44,30,.7)', 'rgba(70,74,52,.6)', 'rgba(58,66,40,.7)', 'rgba(92,90,70,.45)', 'rgba(30,34,28,.6)'][i % 5]);
+    for (i = 0; i < cw / 14; i++) { var x = Math.random() * cw; var gr = g.createLinearGradient(x, 0, x, ch); gr.addColorStop(0, 'rgba(20,24,20,.55)'); gr.addColorStop(1, 'rgba(20,24,20,0)'); g.fillStyle = gr; g.fillRect(x, 0, 1 + Math.random() * 3, ch * (.3 + Math.random() * .6)); }
+    noiseDots(g, cw, ch, cw * ch * .04, ['#5f6a3e', '#3a3f30', '#6b6a55', '#2f352a', '#7a7a5a'], 1.8);
+    joints(g, cw, ch, 'rgba(25,28,22,.8)', 2.4);
+    grime = document.createElement('canvas'); grime.width = cw; grime.height = ch;
+    gctx = grime.getContext('2d'); gctx.drawImage(grimeSrc, 0, 0);
+    wet = document.createElement('canvas'); wet.width = cw; wet.height = ch; wctx = wet.getContext('2d');
+  }
+
+  var field = new LeafField(canvas, {
+    count: PHONE ? TUNE.leavesPhone : TUNE.leavesDesktop,
+    floorTop: function(){ return slab.y + 14; },
+    onResize: function(W, H){
+      var hr = hero.getBoundingClientRect(), sr = slabEl.getBoundingClientRect();
+      slab = { x: 0, y: sr.top - hr.top, w: W, h: sr.height };
+      buildLayers(slab.w, slab.h);
+    }
+  });
+  var ctx = field.ctx;
+
+  function wash(x, y, r, strength){
+    var sx = x * S, sy = (y - slab.y) * S, sr = r * S;
+    if (sy < -sr || sy > slab.h * S + sr) return;
+    gctx.save(); gctx.globalCompositeOperation = 'destination-out';
+    var g = gctx.createRadialGradient(sx, sy, 0, sx, sy, sr);
+    g.addColorStop(0, 'rgba(0,0,0,' + strength + ')'); g.addColorStop(.7, 'rgba(0,0,0,' + strength * .55 + ')'); g.addColorStop(1, 'rgba(0,0,0,0)');
+    gctx.fillStyle = g; gctx.beginPath(); gctx.arc(sx, sy, sr, 0, 6.29); gctx.fill(); gctx.restore();
+    var w = wctx.createRadialGradient(sx, sy, 0, sx, sy, sr * 1.2);
+    w.addColorStop(0, 'rgba(96,104,108,.13)'); w.addColorStop(1, 'rgba(96,104,108,0)');
+    wctx.fillStyle = w; wctx.beginPath(); wctx.arc(sx, sy, sr * 1.2, 0, 6.29); wctx.fill();
+  }
+  function spray(x, y, vx, vy, n){
+    for (var i = 0; i < n; i++) {
+      var a = Math.random() * 6.28, sp = 40 + Math.random() * 160;
+      drops.push({ x: x, y: y, vx: Math.cos(a) * sp + vx * .25, vy: Math.sin(a) * sp - 90 + vy * .2, life: 1, r: .8 + Math.random() * 2.2 });
+    }
+    if (drops.length > 260) drops.splice(0, drops.length - 260);
+  }
+  var lastWash = null;
+  function stroke(x, y, vx, vy, isUser){
+    // fill gaps on fast drags so the clean line is continuous
+    var steps = 1;
+    if (lastWash) { var dx = x - lastWash.x, dy = y - lastWash.y, d = Math.sqrt(dx * dx + dy * dy); steps = Math.min(14, Math.max(1, Math.ceil(d / (brush * .35)))); }
+    for (var s = 1; s <= steps; s++) {
+      var px = lastWash ? lastWash.x + (x - lastWash.x) * s / steps : x, py = lastWash ? lastWash.y + (y - lastWash.y) * s / steps : y;
+      wash(px, py, brush, isUser ? .9 : .75);
+    }
+    lastWash = { x: x, y: y };
+    spray(x, y, vx, vy, PHONE ? 3 : 5);
+    field.blow(x, y, vx, vy, TUNE.blowRadius, TUNE.blowForce);
+  }
+
+  var heroItem = {
+    tick: function(dt, t){
+      var W = field.size()[0], H = field.size()[1], dpr = field.dpr();
+      var r = canvas.getBoundingClientRect(), now = performance.now();
+      var lx = P.x - r.left, ly = P.y - r.top, inHero = lx >= 0 && lx <= W && ly >= 0 && ly <= H;
+      var userNow = inHero && (now - P.user < 140);
+      if (userNow) {
+        if (ly > slab.y - brush) { stroke(lx, ly, P.vx, P.vy, true); if (!washedByUser) { washedByUser = true; hint.classList.add('gone'); } }
+        else { field.blow(lx, ly, P.vx, P.vy, TUNE.blowRadius * .8, TUNE.blowForce * .6); lastWash = null; }
+      } else if (now - P.user > TUNE.idleMs) {
+        // autopilot wand: a lazy figure-eight across the slab
+        auto.t += dt * .55;
+        var ax = W * (.5 + .42 * Math.sin(auto.t * .9) * Math.cos(auto.t * .23)),
+            ay = slab.y + slab.h * (.55 + .32 * Math.sin(auto.t * 1.7 + 1));
+        var avx = (ax - (auto.x || ax)) / dt, avy = (ay - (auto.y || ay)) / dt; auto.x = ax; auto.y = ay;
+        stroke(ax, ay, avx, avy, false);
+      } else lastWash = null;
+
+      // grime creeps back; wet sheen dries
+      gctx.globalAlpha = TUNE.regrow; gctx.drawImage(grimeSrc, 0, 0); gctx.globalAlpha = 1;
+      wctx.save(); wctx.globalCompositeOperation = 'destination-out'; wctx.fillStyle = 'rgba(0,0,0,' + TUNE.wetFade + ')'; wctx.fillRect(0, 0, wet.width, wet.height); wctx.restore();
+
+      field.tick(dt, t);
+      for (var i = drops.length - 1; i >= 0; i--) { var d = drops[i]; d.vy += 420 * dt; d.x += d.vx * dt; d.y += d.vy * dt; d.life -= dt * 1.6; if (d.life <= 0) drops.splice(i, 1); }
+      draw(W, H, dpr);
+    }
+  };
+  function draw(W, H, dpr){
+    ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, canvas.width, canvas.height);
+    var y0 = slab.y * dpr, sw = slab.w * dpr, sh = slab.h * dpr;
+    ctx.imageSmoothingEnabled = true;
+    ctx.drawImage(base, 0, y0, sw, sh); ctx.drawImage(wet, 0, y0, sw, sh); ctx.drawImage(grime, 0, y0, sw, sh);
+    // dusk falls onto the top of the slab: no hard edge
+    var g = ctx.createLinearGradient(0, y0, 0, y0 + 70 * dpr); g.addColorStop(0, 'rgba(22,38,58,1)'); g.addColorStop(1, 'rgba(22,38,58,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, y0 - 1, sw, 70 * dpr + 1);
+    field.draw();
+    ctx.fillStyle = 'rgba(214,234,248,.85)';
+    for (var i = 0; i < drops.length; i++) { var d = drops[i]; ctx.globalAlpha = Math.max(0, d.life); ctx.beginPath(); ctx.arc(d.x * dpr, d.y * dpr, d.r * dpr, 0, 6.29); ctx.fill(); }
+    ctx.globalAlpha = 1;
+  }
+  if (REDUCED) {
+    // still frame: one clean stripe already washed
+    for (var k = 0; k <= 30; k++) wash(slab.w * (.1 + k * .027), slab.y + slab.h * (.45 + .2 * Math.sin(k * .3)), brush, .6);
+    draw(field.size()[0], field.size()[1], field.dpr());
+  } else Loop.add(heroItem, hero);
+})();
+
+/* ===== Quieter leaf zones (area, close) ===== */
+(function(){
+  [['areaCanvas', 'area'], ['closeCanvas', 'close']].forEach(function(z){
+    var canvas = document.getElementById(z[0]), sec = document.getElementById(z[1]);
+    var field = new LeafField(canvas, { count: PHONE ? TUNE.zoneLeavesPhone : TUNE.zoneLeavesDesktop });
+    var item = { tick: function(dt, t){
+      var r = canvas.getBoundingClientRect(), lx = P.x - r.left, ly = P.y - r.top;
+      if (performance.now() - P.user < 140 && lx >= 0 && ly >= 0 && lx <= r.width && ly <= r.height) field.blow(lx, ly, P.vx, P.vy, TUNE.blowRadius, TUNE.blowForce * .7);
+      field.tick(dt, t);
+      field.ctx.setTransform(1, 0, 0, 1, 0, 0); field.ctx.clearRect(0, 0, canvas.width, canvas.height);
+      field.ctx.globalAlpha = .85; field.draw(); field.ctx.globalAlpha = 1;
+    } };
+    if (REDUCED) { field.draw(); } else Loop.add(item, sec);
+  });
+})();
+
+/* ===== Wet-edge seams: water sheeting line, fill follows the line ===== */
+(function(){
+  var NS = 'http://www.w3.org/2000/svg';
+  document.querySelectorAll('[data-seam]').forEach(function(svg, idx){
+    var top = svg.getAttribute('data-top'), bot = svg.getAttribute('data-bottom');
+    var fillTop = document.createElementNS(NS, 'rect'); fillTop.setAttribute('width', 1440); fillTop.setAttribute('height', 46); fillTop.setAttribute('fill', top);
+    var fill = document.createElementNS(NS, 'path'); fill.setAttribute('fill', bot);
+    var lines = [0, 1, 2].map(function(i){ var p = document.createElementNS(NS, 'path'); p.setAttribute('fill', 'none'); p.setAttribute('stroke', i === 1 ? '#e8892b' : 'rgba(207,227,240,' + (i === 0 ? .55 : .4) + ')'); p.setAttribute('stroke-width', i === 1 ? 3 : 2); p.setAttribute('stroke-linecap', 'round'); return p; });
+    svg.appendChild(fillTop); svg.appendChild(fill); lines.forEach(function(p){ svg.appendChild(p); });
+    var ph = idx * 1.7;
+    function y(x, t, i){
+      var swell = Math.sin(x * .0042 + t * .9 * TUNE.seamSpeed + ph) * 6 + Math.sin(x * .011 - t * 1.3 * TUNE.seamSpeed + ph * 2) * 3;
+      var ripple = Math.sin(x * .03 + t * (2.2 + i * .5) * TUNE.seamSpeed + i * 2 + ph) * (1.6 + .8 * Math.sin(t * .4 + i));
+      return 23 + (i - 1) * 6 + swell + ripple;
+    }
+    function render(t){
+      var ds = ['', '', ''];
+      for (var i = 0; i < 3; i++) { var d = ''; for (var x = 0; x <= 1440; x += 20) d += (x ? 'L' : 'M') + x + ' ' + y(x, t, i).toFixed(1); ds[i] = d; lines[i].setAttribute('d', d); }
+      fill.setAttribute('d', ds[1] + 'L1440 46L0 46Z');
+    }
+    render(0);
+    if (!REDUCED) Loop.add({ tick: function(dt, t){ render(t); } }, svg);
+  });
+})();
+
+/* ===== Sticky thumb bar: shows once the hero buttons scroll away ===== */
+(function(){
+  var bar = document.getElementById('bar'), cta = document.getElementById('heroCta'), quote = document.getElementById('quoteForm');
+  if (!('IntersectionObserver' in window)) { bar.classList.add('on'); return; }
+  var ctaVis = true, formVis = false;
+  function upd(){ bar.classList.toggle('on', !ctaVis && !formVis); }
+  new IntersectionObserver(function(es){ ctaVis = es[0].isIntersecting; upd(); }).observe(cta);
+  new IntersectionObserver(function(es){ formVis = es[0].isIntersecting; upd(); }, { threshold: .15 }).observe(quote);
+})();
+
+/* ===== Quote builder: composes one message for text or email ===== */
+(function(){
+  var form = document.getElementById('quoteForm');
+  var name = document.getElementById('q-name'), phone = document.getElementById('q-phone'), town = document.getElementById('q-town'), notes = document.getElementById('q-notes');
+  var sendText = document.getElementById('sendText'), sendMail = document.getElementById('sendMail'), ticket = document.getElementById('ticket');
+  var boxes = Array.prototype.slice.call(form.querySelectorAll('input[name=svc]'));
+
+  function services(){ return boxes.filter(function(b){ return b.checked; }).map(function(b){ return b.getAttribute('data-label').replace('&amp;', '&'); }); }
+  function message(){
+    var lines = ['Hi T&J! I\'d like a free quote.', '', 'Services: ' + (services().join(', ') || '-')];
+    lines.push('Name: ' + (name.value.trim() || '-'));
+    lines.push('Phone: ' + (phone.value.trim() || '-'));
+    lines.push('Town: ' + (town.value || '-'));
+    if (notes.value.trim()) lines.push('Notes: ' + notes.value.trim());
+    lines.push('', 'Photos attached.');
+    return lines.join('\n');
+  }
+  function update(){
+    var m = message();
+    sendText.href = 'sms:' + BIZ.phone + '?&body=' + encodeURIComponent(m);
+    sendMail.href = 'mailto:' + BIZ.email + '?subject=' + encodeURIComponent('Free quote request' + (town.value ? ' – ' + town.value : '')) + '&body=' + encodeURIComponent(m);
+    window.__quoteMsg = m;
+  }
+  function setBad(id, bad){ document.getElementById(id).classList.toggle('bad', bad); }
+  function validate(){
+    var digits = phone.value.replace(/\D/g, '');
+    var ok = { svc: services().length > 0, name: name.value.trim().length > 0, phone: digits.length === 10 || (digits.length === 11 && digits[0] === '1'), town: !!town.value };
+    setBad('f-svc', !ok.svc); setBad('f-name', !ok.name); setBad('f-phone', !ok.phone); setBad('f-town', !ok.town);
+    name.setAttribute('aria-invalid', !ok.name); phone.setAttribute('aria-invalid', !ok.phone); town.setAttribute('aria-invalid', !ok.town);
+    var first = !ok.svc ? boxes[0] : !ok.name ? name : !ok.phone ? phone : !ok.town ? town : null;
+    if (first) { first.focus({ preventScroll: true }); first.closest('.field').scrollIntoView({ behavior: REDUCED ? 'auto' : 'smooth', block: 'center' }); }
+    return !first;
+  }
+  form.addEventListener('input', function(){
+    update();
+    ['f-svc', 'f-name', 'f-phone', 'f-town'].forEach(function(id){ var el = document.getElementById(id); if (el.classList.contains('bad')) validate(); });
+  });
+  form.addEventListener('change', update);
+  form.addEventListener('submit', function(e){ e.preventDefault(); });
+  [sendText, sendMail].forEach(function(a){
+    a.addEventListener('click', function(e){
+      update();
+      if (!validate()) { e.preventDefault(); return; }
+      ticket.textContent = 'Opening your ' + (a === sendText ? 'messages' : 'email') + ' app with this message. Attach your photos, then send:\n\n' + message();
+      ticket.classList.add('show');
+    });
+  });
+  document.getElementById('copyMsg').addEventListener('click', function(){
+    update();
+    var m = message(), status = document.getElementById('copyStatus');
+    ticket.textContent = m; ticket.classList.add('show');
+    function done(ok){ status.textContent = ok ? 'Message copied.' : 'Copy blocked here: select the message below and copy it.'; document.getElementById('copyMsg').textContent = ok ? 'Copied' : 'Select the message below'; }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(m).then(function(){ done(true); }, function(){ done(false); });
+    else done(false);
+  });
+  // service rows preselect their chips
+  document.querySelectorAll('[data-pick]').forEach(function(row){
+    row.addEventListener('click', function(){
+      var picks = row.getAttribute('data-pick').split(',');
+      boxes.forEach(function(b){ b.checked = picks.indexOf(b.value) > -1; });
+      setBad('f-svc', false); update();
+    });
+  });
+  update();
+})();
+</script>
+</body>
+</html>
