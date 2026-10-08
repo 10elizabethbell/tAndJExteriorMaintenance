@@ -19,6 +19,11 @@ colors:
   field-line: "#8f8676"
   field-fill: "#fffdf8"
   error: "#a3361b"
+  error-line: "#c4502a"
+  rust-text: "#9c3f1d"
+  placeholder: "#6d7480"
+  dusk-sky: "#24405f"
+  dusk-floor: "#223c5a"
 typography:
   display:
     fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
@@ -63,7 +68,55 @@ typography:
     fontSize: "17px"
     fontWeight: 800
     lineHeight: 1
+  display-close:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(2.3rem, 10vw, 5rem)"
+    fontWeight: 900
+    lineHeight: 0.98
+    letterSpacing: "-0.02em"
+  display-desktop-hero:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(3.2rem, 4.6vw, 4.6rem)"
+    fontWeight: 900
+    lineHeight: 0.98
+    letterSpacing: "-0.02em"
+  promise-quote:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(1.5rem, 6.2vw, 2.4rem)"
+    fontWeight: 900
+    lineHeight: 1.08
+    letterSpacing: "-0.02em"
+  card-title:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "24px"
+    fontWeight: 900
+    lineHeight: 0.98
+    letterSpacing: "-0.02em"
+  promise-title:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "19px"
+    fontWeight: 900
+    lineHeight: 1.2
+    letterSpacing: "-0.01em"
+  small:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "15px"
+    fontWeight: 500
+    lineHeight: 1.5
+  wordmark-sub:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "14px"
+    fontWeight: 800
+    lineHeight: 1.1
+    letterSpacing: "0.06em"
+  tag:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "13px"
+    fontWeight: 900
+    lineHeight: 1
+    letterSpacing: "0.04em"
 rounded:
+  focus: "10px"
   pill: "999px"
   card: "24px"
   field: "14px"
