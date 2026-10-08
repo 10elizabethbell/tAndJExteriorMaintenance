@@ -1,0 +1,520 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T15:49:55+00:00",
+  "title": "Design System: T&J Exterior Maintenance",
+  "extensions": {
+    "colorMeta": {
+      "navy": {
+        "role": "neutral",
+        "displayName": "Dusk Navy",
+        "canonical": "oklch(26.5% 0.044 255)",
+        "tonalRamp": [
+          "#010b1d",
+          "#152539",
+          "#304157",
+          "#4d5f76",
+          "#6c7f97",
+          "#8ca0ba",
+          "#b2c6e1",
+          "#dbf1ff"
+        ]
+      },
+      "navy-2": {
+        "role": "neutral",
+        "displayName": "Deep Dusk",
+        "canonical": "oklch(30.8% 0.051 254)",
+        "tonalRamp": [
+          "#000b20",
+          "#11253c",
+          "#2c415a",
+          "#4a5f7a",
+          "#687f9b",
+          "#89a1be",
+          "#aec7e5",
+          "#d8f1ff"
+        ]
+      },
+      "navy-3": {
+        "role": "neutral",
+        "displayName": "Night Navy",
+        "canonical": "oklch(22.3% 0.035 253)",
+        "tonalRamp": [
+          "#020c19",
+          "#182535",
+          "#334152",
+          "#505f71",
+          "#6f7f92",
+          "#90a0b4",
+          "#b5c6db",
+          "#dff1ff"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink (Dusk Navy as text)",
+        "canonical": "oklch(26.5% 0.044 255)",
+        "tonalRamp": [
+          "#010b1d",
+          "#152539",
+          "#304157",
+          "#4d5f76",
+          "#6c7f97",
+          "#8ca0ba",
+          "#b2c6e1",
+          "#dbf1ff"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Concrete Cream",
+        "canonical": "oklch(95.1% 0.013 82)",
+        "tonalRamp": [
+          "#0e0b06",
+          "#27241d",
+          "#433f38",
+          "#615d55",
+          "#817d75",
+          "#a29e95",
+          "#c8c3bb",
+          "#f3eee5"
+        ]
+      },
+      "cream-2": {
+        "role": "neutral",
+        "displayName": "Weathered Cream",
+        "canonical": "oklch(90.9% 0.019 83)",
+        "tonalRamp": [
+          "#0f0a03",
+          "#29231a",
+          "#453f34",
+          "#635d52",
+          "#837c71",
+          "#a49e91",
+          "#cac3b7",
+          "#f5eee1"
+        ]
+      },
+      "orange": {
+        "role": "primary",
+        "displayName": "Leaf Orange",
+        "canonical": "oklch(71.7% 0.153 60)",
+        "tonalRamp": [
+          "#290000",
+          "#520000",
+          "#751d00",
+          "#994000",
+          "#bd6200",
+          "#e28423",
+          "#ffaa52",
+          "#ffdb9b"
+        ]
+      },
+      "orange-hi": {
+        "role": "primary",
+        "displayName": "Lit Orange",
+        "canonical": "oklch(76.0% 0.147 63)",
+        "tonalRamp": [
+          "#280000",
+          "#4f0000",
+          "#722300",
+          "#954400",
+          "#b96500",
+          "#dd8726",
+          "#ffad54",
+          "#ffdd98"
+        ]
+      },
+      "rust": {
+        "role": "secondary",
+        "displayName": "Rust Leaf",
+        "canonical": "oklch(55.4% 0.141 40)",
+        "tonalRamp": [
+          "#2d0000",
+          "#550000",
+          "#781400",
+          "#9c390f",
+          "#c15b35",
+          "#e77d57",
+          "#ffa37c",
+          "#ffd3b1"
+        ]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Dry Gold",
+        "canonical": "oklch(79.6% 0.134 83)",
+        "tonalRamp": [
+          "#210000",
+          "#411600",
+          "#613400",
+          "#815300",
+          "#a37400",
+          "#c69623",
+          "#eebc52",
+          "#ffe88d"
+        ]
+      },
+      "mist": {
+        "role": "tertiary",
+        "displayName": "Spray Mist",
+        "canonical": "oklch(90.5% 0.028 236)",
+        "tonalRamp": [
+          "#010d15",
+          "#172630",
+          "#32424d",
+          "#4f606b",
+          "#6e808c",
+          "#8fa2ae",
+          "#b4c7d4",
+          "#def2ff"
+        ]
+      },
+      "text-on-dark": {
+        "role": "neutral",
+        "displayName": "Cream Text on Dusk",
+        "canonical": "oklch(95.1% 0.013 82)",
+        "tonalRamp": [
+          "#0e0b06",
+          "#27241d",
+          "#433f38",
+          "#615d55",
+          "#817d75",
+          "#a29e95",
+          "#c8c3bb",
+          "#f3eee5"
+        ]
+      },
+      "muted-on-dark": {
+        "role": "neutral",
+        "displayName": "Dusk Slate",
+        "canonical": "oklch(81.2% 0.024 252)",
+        "tonalRamp": [
+          "#050c15",
+          "#1c252f",
+          "#37414c",
+          "#545f6b",
+          "#737e8b",
+          "#94a0ad",
+          "#b9c5d4",
+          "#e3f0ff"
+        ]
+      },
+      "muted-on-light": {
+        "role": "neutral",
+        "displayName": "Wet Slate",
+        "canonical": "oklch(46.6% 0.027 252)",
+        "tonalRamp": [
+          "#040c16",
+          "#1a2531",
+          "#35414e",
+          "#535f6d",
+          "#727f8e",
+          "#93a0af",
+          "#b8c6d6",
+          "#e2f0ff"
+        ]
+      },
+      "field-line": {
+        "role": "neutral",
+        "displayName": "Field Line",
+        "canonical": "oklch(83.2% 0.022 83)",
+        "tonalRamp": [
+          "#100a02",
+          "#292318",
+          "#453f32",
+          "#645d50",
+          "#847c6f",
+          "#a59d8f",
+          "#cbc3b4",
+          "#f6eede"
+        ]
+      },
+      "field-fill": {
+        "role": "neutral",
+        "displayName": "Field Fill",
+        "canonical": "oklch(99.4% 0.007 89)",
+        "tonalRamp": [
+          "#0c0b08",
+          "#252420",
+          "#41403c",
+          "#5f5d59",
+          "#7f7d79",
+          "#a09e9a",
+          "#c6c4bf",
+          "#f0eee9"
+        ]
+      },
+      "error": {
+        "role": "error",
+        "displayName": "Error Brick",
+        "canonical": "oklch(48.8% 0.149 35)",
+        "tonalRamp": [
+          "#2d0000",
+          "#570000",
+          "#7b0800",
+          "#a03318",
+          "#c6563b",
+          "#ec785c",
+          "#ff9e81",
+          "#ffd1b8"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline (and the closing h2 at clamp(2.3rem,10vw,5rem)); 900 uppercase; accent words in orange."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2s."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Service row h3s (22px); card titles at 24px; promise titles at 19px."
+      },
+      "pitch": {
+        "displayName": "Pitch",
+        "purpose": "The one line under the hero headline; max 20px, max 36ch."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Paragraph under every section h2; max 46ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base reading text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels and chip legend."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "All buttons; phone numbers inside drop to 700 at 85% opacity."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-lift",
+        "value": "0 24px 50px -24px rgba(5,12,22,.7)",
+        "purpose": "Quote card and desktop hero-pick panel floating on dusk."
+      },
+      {
+        "name": "button-primary",
+        "value": "0 8px 18px -10px rgba(6,14,24,.55)",
+        "purpose": "Primary button only."
+      },
+      {
+        "name": "focus-halo",
+        "value": "0 0 0 4px rgba(232,137,43,.25)",
+        "purpose": "Inputs on focus, with border turning orange."
+      },
+      {
+        "name": "frosted-top-bar",
+        "value": "background: rgba(22,38,58,.88); backdrop-filter: blur(10px)",
+        "purpose": "Sticky 60px top bar."
+      },
+      {
+        "name": "frosted-thumb-bar",
+        "value": "background: rgba(15,28,43,.92); backdrop-filter: blur(12px)",
+        "purpose": "Phone thumb bar."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-settle",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "All UI state transitions (buttons .25s, row cue .3s, chips .2s, thumb bar .45s, ticket .5s)."
+      },
+      {
+        "name": "press",
+        "value": "transform: scale(.97)",
+        "purpose": "Every button on :active (chips .96)."
+      },
+      {
+        "name": "lift",
+        "value": "transform: translateY(-2px)",
+        "purpose": "Button hover, desktop only."
+      },
+      {
+        "name": "shared-loop",
+        "value": "one requestAnimationFrame loop, dt clamped to 50ms",
+        "purpose": "Drives hero, leaf zones and seams; stops when nothing is visible."
+      },
+      {
+        "name": "offscreen-pause",
+        "value": "IntersectionObserver per item, rootMargin 80px",
+        "purpose": "Skips invisible items and wakes the loop on re-entry."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "loop never starts; still frame",
+        "purpose": "Hero draws one pre-washed stripe; leaves rest; seams render at t=0; CSS transitions .01ms; no smooth scroll."
+      },
+      {
+        "name": "TUNE",
+        "value": "leavesPhone 16, leavesDesktop 34, zoneLeavesPhone 7, zoneLeavesDesktop 14, brushPhone 24, brushDesktop 34, regrow 0.0009, wetFade 0.03, idleMs 3200, blowRadius 90, blowForce 520, seamSpeed 1.0",
+        "purpose": "Single place to tune the living elements."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "760px"
+      },
+      {
+        "name": "columns",
+        "value": "900px"
+      },
+      {
+        "name": "hero-split",
+        "value": "1000px"
+      },
+      {
+        "name": "fine-pointer",
+        "value": "(hover: hover) and (pointer: fine)"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The orange-filled half of the one button component; the main action (quote, send by text).",
+      "html": "<div class=\"ds-dusk\"><a class=\"ds-btn ds-btn-primary\" href=\"#\">Get a free quote <svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h13M13 6l6 6-6 6\"/></svg></a></div>",
+      "css": ".ds-dusk{background:#16263a;padding:24px;} .ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border-radius:999px;border:2px solid #e8892b;font:800 17px/1 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;text-decoration:none;cursor:pointer;transition:transform .25s cubic-bezier(.16,1,.3,1),background-color .2s,box-shadow .25s;} .ds-btn-primary{background:#e8892b;color:#16263a;box-shadow:0 8px 18px -10px rgba(6,14,24,.55);} .ds-btn-primary:hover{background:#f29a3f;transform:translateY(-2px);} .ds-btn:active{transform:scale(.97);} .ds-btn:focus-visible{outline:3px solid #e8892b;outline-offset:3px;}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Same outline and height as primary, translucent navy fill on dark grounds; always paired with the primary.",
+      "html": "<div class=\"ds-dusk\"><a class=\"ds-btn ds-btn-ghost\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 3.5h3.2l1.6 4.2-2.2 1.5a11 11 0 0 0 7.2 7.2l1.5-2.2 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.5 16.5 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z\"/></svg>Call <span class=\"ds-num\">(732) 644-6757</span></a></div>",
+      "css": ".ds-dusk{background:#16263a;padding:24px;} .ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border-radius:999px;border:2px solid #e8892b;font:800 17px/1 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;text-decoration:none;cursor:pointer;transition:transform .25s cubic-bezier(.16,1,.3,1),background-color .2s,box-shadow .25s;} .ds-btn-ghost{background:rgba(22,38,58,.55);color:#f3eee5;} .ds-btn-ghost:hover{background:rgba(232,137,43,.14);transform:translateY(-2px);} .ds-btn:active{transform:scale(.97);} .ds-btn:focus-visible{outline:3px solid #e8892b;outline-offset:3px;} .ds-num{font-weight:700;opacity:.85;}"
+    },
+    {
+      "name": "Ghost Button on Cream",
+      "kind": "button",
+      "refersTo": "button-ghost-on-light",
+      "description": "Ghost variant inside cream surfaces (quote card): transparent fill, ink text.",
+      "html": "<div class=\"ds-day\"><a class=\"ds-btn ds-btn-ghost-l\" href=\"#\">Send by email</a></div>",
+      "css": ".ds-day{background:#f3eee5;padding:24px;} .ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border-radius:999px;border:2px solid #e8892b;font:800 17px/1 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;text-decoration:none;cursor:pointer;transition:transform .25s cubic-bezier(.16,1,.3,1),background-color .2s,box-shadow .25s;} .ds-btn-ghost-l{background:transparent;color:#16263a;} .ds-btn-ghost-l:hover{background:rgba(232,137,43,.14);transform:translateY(-2px);} .ds-btn:active{transform:scale(.97);}"
+    },
+    {
+      "name": "Service Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Multi-select service pill in the quote builder; selected state fills navy.",
+      "html": "<div class=\"ds-day ds-chips\"><label class=\"ds-chip\"><input type=\"checkbox\" checked><span>Leaf cleanup</span></label><label class=\"ds-chip\"><input type=\"checkbox\"><span>Gutters</span></label><label class=\"ds-chip\"><input type=\"checkbox\"><span>Driveway &amp; concrete</span></label></div>",
+      "css": ".ds-day{background:#f3eee5;padding:24px;} .ds-chips{display:flex;flex-wrap:wrap;gap:10px;} .ds-chip{position:relative;} .ds-chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0;} .ds-chip span{display:flex;align-items:center;min-height:46px;padding:0 16px;border-radius:999px;border:2px solid #8f8676;background:#fffdf8;color:#16263a;font:700 16px/1 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;cursor:pointer;user-select:none;transition:background-color .2s,border-color .2s,transform .2s cubic-bezier(.16,1,.3,1);} .ds-chip input:checked+span{background:#16263a;border-color:#16263a;color:#f3eee5;} .ds-chip input:focus-visible+span{outline:3px solid #16263a;outline-offset:2px;} .ds-chip span:active{transform:scale(.96);}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Quote-builder input: 52px, 14px corner, orange border and halo on focus, brick outline + message when invalid.",
+      "html": "<div class=\"ds-day\"><label class=\"ds-label\" for=\"ds-n\">Your name</label><input class=\"ds-input\" id=\"ds-n\" placeholder=\"First name is fine\"><div class=\"ds-bad\"><label class=\"ds-label\" for=\"ds-p\">Best number to reach you</label><input class=\"ds-input\" id=\"ds-p\" value=\"732 555\"><p class=\"ds-err\">Add a phone number with area code (10 digits) so T&amp;J can call or text back.</p></div></div>",
+      "css": ".ds-day{background:#f3eee5;padding:24px;color:#16263a;} .ds-label{display:block;font:800 16px/1.4 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;margin:0 0 8px;} .ds-input{width:100%;box-sizing:border-box;min-height:52px;padding:12px 14px;border-radius:14px;border:2px solid #8f8676;background:#fffdf8;color:#16263a;font:500 17px/1.3 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;appearance:none;margin-bottom:18px;} .ds-input::placeholder{color:#6d7480;} .ds-input:focus{outline:none;border-color:#e8892b;box-shadow:0 0 0 4px rgba(232,137,43,.25);} .ds-bad .ds-input{border-color:#c4502a;margin-bottom:0;} .ds-err{margin:8px 0 0;color:#a3361b;font:700 15px/1.4 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;}"
+    },
+    {
+      "name": "Quote Card",
+      "kind": "card",
+      "refersTo": "quote-card",
+      "description": "Cream daylight card floating on the navy-2 quote ground with the card-lift shadow.",
+      "html": "<div class=\"ds-q\"><div class=\"ds-card\"><h3>Your quote request</h3><p>Photos help T&amp;J price it right.</p></div></div>",
+      "css": ".ds-q{background:#1d3149;padding:28px;} .ds-card{background:#f3eee5;color:#16263a;border-radius:24px;padding:22px 18px 24px;box-shadow:0 24px 50px -24px rgba(5,12,22,.7);font:400 17px/1.55 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;} .ds-card h3{margin:0 0 8px;font:900 24px/.98 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;text-transform:uppercase;letter-spacing:-.02em;} .ds-card p{margin:0;color:#4f5b69;}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row-cue",
+      "description": "Whole-row link with one 44px arrow-in-a-circle cue; the seasonal row takes an orange wash and orange cue.",
+      "html": "<div class=\"ds-day\"><a class=\"ds-row ds-fall\" href=\"#\"><div><h3>Fall cleanup</h3><p>Leaf cleanup &amp; disposal · Gutter cleaning</p></div><span class=\"ds-go\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h13M13 6l6 6-6 6\"/></svg></span></a><a class=\"ds-row\" href=\"#\"><div><h3>Pavers</h3><p>Pressure washing · Polymeric sanding · Sealing</p></div><span class=\"ds-go\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h13M13 6l6 6-6 6\"/></svg></span></a></div>",
+      "css": ".ds-day{background:#f3eee5;padding:24px;} .ds-row{display:grid;grid-template-columns:1fr 44px;align-items:center;gap:14px;padding:20px 2px;border-bottom:2px solid #e7e0d3;text-decoration:none;color:#16263a;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;} .ds-row h3{margin:0;font:900 22px/.98 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;text-transform:uppercase;letter-spacing:-.01em;} .ds-row p{margin:6px 0 0;font-size:16px;line-height:1.45;color:#4f5b69;} .ds-go{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#16263a;color:#f3eee5;transition:transform .3s cubic-bezier(.16,1,.3,1),background-color .2s;} .ds-go svg{width:20px;height:20px;} .ds-row:hover .ds-go{transform:translateX(4px) scale(1.06);background:#e8892b;color:#16263a;} .ds-fall{background:linear-gradient(90deg,rgba(232,137,43,.16),rgba(232,137,43,0) 80%);padding-left:16px;} .ds-fall .ds-go{background:#e8892b;color:#16263a;}"
+    },
+    {
+      "name": "Phone Thumb Bar",
+      "kind": "nav",
+      "refersTo": "button-primary",
+      "description": "Fixed bottom bar on phones (<760px): Call ghost + Free quote primary; shown only when hero buttons and the quote card are out of view.",
+      "html": "<nav class=\"ds-bar\"><a class=\"ds-btn ds-btn-ghost\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 3.5h3.2l1.6 4.2-2.2 1.5a11 11 0 0 0 7.2 7.2l1.5-2.2 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.5 16.5 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z\"/></svg>Call</a><a class=\"ds-btn ds-btn-primary\" href=\"#\">Free quote</a></nav>",
+      "css": ".ds-bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px;background:rgba(15,28,43,.92);backdrop-filter:blur(12px);} .ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border-radius:999px;border:2px solid #e8892b;font:800 17px/1 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;text-decoration:none;cursor:pointer;transition:transform .25s cubic-bezier(.16,1,.3,1),background-color .2s,box-shadow .25s;min-height:52px;font-size:16px;padding:0 10px;} .ds-btn-primary{background:#e8892b;color:#16263a;box-shadow:0 8px 18px -10px rgba(6,14,24,.55);} .ds-btn-ghost{background:rgba(22,38,58,.55);color:#f3eee5;} .ds-btn:active{transform:scale(.97);}"
+    },
+    {
+      "name": "Wet-Edge Seam",
+      "kind": "custom",
+      "description": "Section boundary: lower ground fills under a moving water line; orange center line, two mist lines. Static frame shown; live version animates on the shared loop.",
+      "html": "<svg class=\"ds-seam\" viewBox=\"0 0 1440 46\" preserveAspectRatio=\"none\"><rect width=\"1440\" height=\"46\" fill=\"#16263a\"/><path fill=\"#f3eee5\" d=\"M0 23 C240 15 480 31 720 23 S1200 15 1440 23 L1440 46 L0 46Z\"/><path fill=\"none\" stroke=\"rgba(207,227,240,.55)\" stroke-width=\"2\" stroke-linecap=\"round\" d=\"M0 17 C240 9 480 25 720 17 S1200 9 1440 17\"/><path fill=\"none\" stroke=\"#e8892b\" stroke-width=\"3\" stroke-linecap=\"round\" d=\"M0 23 C240 15 480 31 720 23 S1200 15 1440 23\"/><path fill=\"none\" stroke=\"rgba(207,227,240,.4)\" stroke-width=\"2\" stroke-linecap=\"round\" d=\"M0 29 C240 21 480 37 720 29 S1200 21 1440 29\"/></svg>",
+      "css": ".ds-seam{display:block;width:100%;height:46px;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Dusk on a Jersey Shore Driveway",
+    "overview": "The whole system is one evening scene. Dark sections are the navy dusk T&J's own site already uses; light sections are clean concrete in daylight; orange is both T&J's accent and the fall leaf. The trade's material carries the proof: there are no before/after photos, because the hero hands the visitor a grimy driveway slab and a pressure wand, and the \"after\" is whatever they wash themselves. Leaves fall, settle into a bed and get blown off by the same pointer that washes. Water seams sheet across every section boundary.\n\nIt is built for a phone held in one hand inside Facebook's in-app browser. Density is low and the targets are big: 56px pill buttons at full width, 44px-plus everything else, and a sticky thumb bar once the hero buttons scroll away. Type is the system font stack set heavy and uppercase for headings, which is Ellie's confirmed house style for pitch sites (fast, and it has worked), with plain sentence-case body.\n\nIt rejects the stock-hero and icon-card template of the client's current lovable.app site, and it rejects black grounds: the deepest surface (footer) is still blue.",
+    "keyCharacteristics": [
+      "Navy/cream alternating grounds joined by animated wet-edge seams, never a straight color edge.",
+      "One accent, orange, used for the primary action, the leaf and the focus ring.",
+      "One button component: same 2px orange outline, same 56px height, two fills.",
+      "A living hero made of the trade's material (concrete, grime, water, leaves) that reacts to finger and mouse.",
+      "Everything animated runs on one shared loop, pauses off screen, and becomes a still frame under reduced motion."
+    ],
+    "rules": [
+      {
+        "name": "The Still-Blue Rule",
+        "body": "No ground is black or near-black. The darkest surface is `navy-3`; anything darker must keep the navy hue.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Leaf Rule",
+        "body": "Orange is the only accent. It marks the primary action, the leaf, and focus; no second accent color is introduced for UI.",
+        "section": "colors"
+      },
+      {
+        "name": "The Shout-and-Talk Rule",
+        "body": "Headings are 900 uppercase; nothing else is uppercase except the wordmark subtitle. Body, labels, buttons and chips stay sentence case.",
+        "section": "typography"
+      },
+      {
+        "name": "The 16px Floor Rule",
+        "body": "Reading text is never below 16px on phones; 15px is reserved for footnote-grade lines (footer, errors, the ticket).",
+        "section": "typography"
+      },
+      {
+        "name": "The First-Screen Rule",
+        "body": "At 390px the first viewport holds wordmark + call pill, the three-line benefit headline, the one-line pitch, both full-width buttons, and the top of the washable slab. Nothing pushes the slab below the fold.",
+        "section": "layout"
+      },
+      {
+        "name": "The Proof-in-the-Hole Rule",
+        "body": "When a wide layout opens a column, it is filled with something working (the hero-pick chips, the quote card), never left empty.",
+        "section": "layout"
+      },
+      {
+        "name": "The No-Glint Rule",
+        "body": "Surfaces never carry a thin white highlight line or inset rim. Depth comes from tinted soft shadow, shading and ground change.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep every button on the one component: 2px `orange` outline, 56px minimum height, pill shape, primary or ghost fill only.",
+      "**Do** join any new section to its neighbor with a wet-edge seam whose fill follows the line, using the two grounds' exact token values.",
+      "**Do** register any new animated element with the shared loop and its own off-screen pause, and give it a still frame under reduced motion.",
+      "**Do** keep the slab directly under the hero buttons in the first phone viewport, and let touch scroll vertically over it.",
+      "**Do** make the whole row or card the link, with a single 44px arrow-in-a-circle cue.",
+      "**Do** offer calling beside any text option, and keep the copy button a convenience with a visible fallback.",
+      "**Do** put hover-only effects under `(hover: hover)`; every interaction must work by tap and drag.",
+      "**Do** adjust motion feel through the TUNE constants rather than by editing physics inline."
+    ],
+    "donts": [
+      "**Don't** use a black or near-black ground; the darkest surface is `navy-3`.",
+      "**Don't** introduce a second UI accent; orange is the action, the leaf and the focus.",
+      "**Don't** add thin white highlight lines, inset rims or glints to buttons, cards or leaves.",
+      "**Don't** use stock or AI before/after photos as proof; the slab is the proof.",
+      "**Don't** set body, labels, buttons or chips in uppercase.",
+      "**Don't** take `field-line` (1.65:1 on its fill) or the orange focus ring on cream (2.3:1) as the standard for a new control's only boundary or focus indicator; both sit below the 3:1 non-text floor and are recorded as open defects, not precedent.",
+      "**Don't** show the thumb bar on screens 760px and wider, or while the hero buttons or the quote card are already in view."
+    ]
+  }
+}

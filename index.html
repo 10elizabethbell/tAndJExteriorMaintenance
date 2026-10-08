@@ -40,6 +40,7 @@ body{margin:0;background:var(--navy);color:var(--text-on-dark);font:400 17px/1.5
 input,select,textarea{caret-color:var(--orange)}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:10px}
+.on-light :focus-visible,.quote :focus-visible,.hero-pick :focus-visible{outline-color:var(--navy)}
 h1,h2,h3{font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.98;margin:0;text-wrap:balance}
 p{margin:0}
 .wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 var(--gutter)}
@@ -85,7 +86,7 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
   .hero h1{font-size:clamp(3.2rem,4.6vw,4.6rem);max-width:none}
   .hero-pick h2{font-size:24px}
   .pick-chips{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 20px}
-  .pick-chips a{display:flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:2px solid #cfc7b8;background:#fffdf8;font-weight:700;font-size:16px;text-decoration:none;transition:background-color .2s,border-color .2s}
+  .pick-chips a{display:flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:2px solid #8f8676;background:#fffdf8;font-weight:700;font-size:16px;text-decoration:none;transition:background-color .2s,border-color .2s}
   .pick-chips a:hover{background:var(--navy);border-color:var(--navy);color:var(--cream)}
 }
 .slab-space{height:clamp(170px,30vh,330px);position:relative;touch-action:pan-y}
@@ -140,7 +141,7 @@ section{position:relative}
 .field{margin-top:18px}
 .field>label,.legend{display:block;font-weight:800;font-size:16px;margin-bottom:8px}
 .field .opt{font-weight:500;color:var(--muted-on-light)}
-.quote input[type=text],.quote input[type=tel],.quote select,.quote textarea{width:100%;min-height:52px;padding:12px 14px;border-radius:14px;border:2px solid #cfc7b8;background:#fffdf8;color:var(--ink);font:500 17px/1.3 var(--font);-webkit-appearance:none;appearance:none}
+.quote input[type=text],.quote input[type=tel],.quote select,.quote textarea{width:100%;min-height:52px;padding:12px 14px;border-radius:14px;border:2px solid #8f8676;background:#fffdf8;color:var(--ink);font:500 17px/1.3 var(--font);-webkit-appearance:none;appearance:none}
 .quote select{background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
 .quote textarea{min-height:96px;resize:vertical}
 .quote input:focus,.quote select:focus,.quote textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 4px rgba(232,137,43,.25)}
@@ -148,9 +149,9 @@ section{position:relative}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chip{position:relative}
 .chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
-.chip span{display:flex;align-items:center;min-height:46px;padding:0 16px;border-radius:999px;border:2px solid #cfc7b8;background:#fffdf8;font-weight:700;font-size:16px;cursor:pointer;user-select:none;transition:background-color .2s,border-color .2s,transform .2s cubic-bezier(.16,1,.3,1)}
+.chip span{display:flex;align-items:center;min-height:46px;padding:0 16px;border-radius:999px;border:2px solid #8f8676;background:#fffdf8;font-weight:700;font-size:16px;cursor:pointer;user-select:none;transition:background-color .2s,border-color .2s,transform .2s cubic-bezier(.16,1,.3,1)}
 .chip input:checked+span{background:var(--navy);border-color:var(--navy);color:var(--cream)}
-.chip input:focus-visible+span{outline:3px solid var(--orange);outline-offset:2px}
+.chip input:focus-visible+span{outline:3px solid var(--navy);outline-offset:2px}
 .chip span:active{transform:scale(.96)}
 .err{display:none;margin-top:8px;color:#a3361b;font-weight:700;font-size:15px}
 .bad .err{display:block}
