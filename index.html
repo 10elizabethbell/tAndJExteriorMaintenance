@@ -679,13 +679,14 @@ function LeafField(canvas, opts){
   function blob(c, x, y, r, col){ var g = c.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, col); g.addColorStop(1, 'rgba(0,0,0,0)'); c.fillStyle = g; c.beginPath(); c.arc(x, y, r, 0, 6.29); c.fill(); }
   function windows(){ // [x, y, w, h] in css px
     var wh = L.ground - L.eave, hw = L.x1 - L.x0, w = hw * .14, h = wh * .26, y = L.eave + wh * .15, out = [];
-    [.2, .5, .8].forEach(function(f){ out.push([L.x0 + hw * f - w / 2, y, w, h]); });
-    var gl = L.garage[0] - L.x0; if (gl > hw * .34) out.push([L.x0 + gl * .32 - w / 2, L.ground - wh * .5, w, h * .9]);
+    [.27, .73].forEach(function(f){ out.push([L.x0 + hw * f - w / 2, y, w, h]); });
+    // a small window beside the front door (half the big ones)
+    var gl = L.garage[0] - L.x0; if (gl > hw * .34) out.push([L.x0 + gl * .26 - w * .25, L.ground - wh * .44, w * .5, h * .5]);
     return out;
   }
   function door(){ // front door between the lower window and the garage, when there's room
-    var gl = L.garage[0] - L.x0, wh = L.ground - L.eave, w = Math.min(22, (L.x1 - L.x0) * .08), h = wh * .42;
-    return gl > (L.x1 - L.x0) * .34 ? [L.x0 + gl * .74 - w / 2, L.ground - h, w, h] : null;
+    var gl = L.garage[0] - L.x0, wh = L.ground - L.eave, w = Math.min(40, (L.x1 - L.x0) * .1), h = wh * .52;
+    return gl > (L.x1 - L.x0) * .34 ? [L.x0 + gl * .64 - w / 2, L.ground - h, w, h] : null;
   }
   function chimney(){ var w = (L.x1 - L.x0) * .07, x = lerp(L.peakX, L.roofR, .55); return { x: x, w: w, top: L.peakY + (L.eave - L.peakY) * .05, base: roofY(x + w) }; }
 
