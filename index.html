@@ -487,7 +487,7 @@ var TUNE = {
 };
 var PHONE = window.matchMedia('(max-width: 759px)').matches;
 var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var BIZ = { phone: '+17326446757', email: 'tjexteriormaintenance@gmail.com', name: 'T&J' };
+var BIZ = { phone: '+17326446757', name: 'T&J' };
 
 /* ===== Shared pointer (mouse + finger) ===== */
 var P = { x: -9999, y: -9999, vx: 0, vy: 0, t: 0, active: false, user: 0 };
@@ -1220,7 +1220,7 @@ function LeafField(canvas, opts){
   });
 })();
 
-/* ===== Quote builder: composes one message for text or email ===== */
+/* ===== Quote builder: composes one message to send by text ===== */
 (function(){
   var form = document.getElementById('quoteForm');
   var name = document.getElementById('q-name'), phone = document.getElementById('q-phone'), town = document.getElementById('q-town'), notes = document.getElementById('q-notes');
