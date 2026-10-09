@@ -35,7 +35,7 @@
 
 /* ===== Base ===== */
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px;overscroll-behavior-y:none}
 body{margin:0;background:var(--navy);color:var(--text-on-dark);font:400 17px/1.55 var(--font);overflow-x:hidden}
 ::selection{background:var(--orange);color:var(--navy)}
 input,select,textarea{caret-color:var(--hover-blue)}
@@ -85,7 +85,7 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
   .hero-main{max-width:min(48vw,640px)}
   .hero h1{font-size:clamp(3.2rem,4.6vw,4.6rem)}
 }
-.slab-space{height:clamp(170px,30vh,330px);position:relative;touch-action:pan-y}
+.slab-space{height:clamp(170px,30vh,330px);height:clamp(170px,30svh,330px);position:relative;touch-action:pan-y}
 .hint{position:absolute;left:var(--gutter);bottom:18px;z-index:3;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(22,38,58,.78);font-size:14px;font-weight:700;color:var(--text-on-dark);pointer-events:none;transition:opacity .6s}
 .hint.gone{opacity:0}
 .hint svg{width:18px;height:18px}
@@ -586,7 +586,10 @@ function LeafField(canvas, opts){
     return l;
   }
   function resize(){
-    var r = canvas.getBoundingClientRect(); W = r.width; H = r.height;
+    var r = canvas.getBoundingClientRect();
+    // phones fire resize when the address bar slides away mid-drag; same size means keep the scene (and the gunk) as is
+    if (W && Math.round(r.width) === Math.round(W) && Math.round(r.height) === Math.round(H)) return;
+    W = r.width; H = r.height;
     canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
     if (opts.onResize) opts.onResize(W, H, dpr);
     leaves.forEach(function(l){ if (l.x > W) l.x = rnd(0, W); l.restY = rnd(floorTop(), H - 6); if (opts.assign) opts.assign(l); if (l.rest) l.y = restY(l); });
