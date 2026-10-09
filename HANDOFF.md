@@ -4,12 +4,9 @@
 
 ## What's built
 - **World:** dusk on a Jersey Shore driveway. Their navy as the ground, their orange as the fall leaf, clean-concrete cream for the light sections. System font, heavy uppercase heads.
-- **Signature:** the hero's bottom band is a grimy concrete driveway slab (tire tracks, oil stains, moss in the joints). Drag a finger or mouse across it and it pressure-washes clean (spray droplets, a wet sheen that dries, grime that slowly creeps back so it's always playable). A dark lance with a brass nozzle follows the finger. When nobody touches it, an autopilot wand washes a figure-eight. Leaves fall with layered-sine sway, settle on the slab, and get blown off by the wand. Leaves also drift through the area and closing sections; animated wet-edge seams (orange waterline + mist lines) join every section.
-- **Sections:** hero ("Leaves gone. Gutters clear. Driveway clean.") → services (6 tappable rows, Fall cleanup first; each preselects its service in the quote form) → quote builder → service area + their own promises → close ("Restore your curb appeal this fall.") → footer with "Demo one-pager — free sample."
-- **Quote builder (the core pitch):** services chips, name, phone, town, notes → composes one message, sent by **text** (`sms:+17326446757` with body) or **email** (mailto with subject "Free quote request – <town>"). Tells the visitor to attach photos in their app; the message ends "(Photos below, if I added any.)" rather than claiming photos are attached. Every quote button lands on the form itself, not the section heading. Inline errors, copy-message fallback, call link.
-- **Desktop hero:** right half holds a "What needs doing?" card whose chips jump to the form with that service picked. On desktop, email is the primary send and the text button shows the number.
+- **Signature (redrawn from Ellie's sketch, 2026-10-08):** the whole hero is one dusk scene. A big fall tree on the left, full of leaf clusters that sway in the wind, drapes over the headline and the roof. A dirty house (black streaks, algae, grimy siding, warm lit windows, garage) sits on the right, and a dirty driveway runs from the garage down-left through the yard. Leaves fall from the tree and pile up on the roof, yard and driveway. Dragging a finger or mouse works as a pressure washer: it cleans the siding and the concrete, blows leaves away, and shoves the canopy, which springs back and shakes leaves loose. Grime creeps back slowly. When nobody touches it, the wand glides between the wall and the drive on its own. Phone: house behind the copy on the right, as sketched. Desktop: same scene with the house in the right half.
 - **Phone:** sticky Call / Free quote bar appears once the hero buttons scroll away and hides while the form is on screen.
-- Tunables are in `TUNE` at the top of the script (leaf counts, brush size, regrow speed, dry speed, autopilot delay, seam speed).
+- Tunables are in `TUNE` (also `canopyPhone/canopyDesktop` leaf clusters and `wind` sway speed) at the top of the script (leaf counts, brush size, regrow speed, dry speed, autopilot delay, seam speed).
 
 ## Assumptions I made
 - **Service grouping** (Driveways & concrete / House washing / Pavers / Decks & wood / Commercial): the brief's list is verbatim but flat. I grouped it in its own order, which matches the image names on their site (driveway, softwash, pavers, deck, commercial). "Pressure washing" sits under Pavers because that's where it falls in their list.
@@ -39,7 +36,8 @@
 - **Runner-up world:** rain gutters and downspouts. Water sheeting off a roofline and a gutter you can clear of leaves by flicking them, so the water runs. Stronger for the gutter season, weaker for pressure washing.
 - Real photo upload with a tiny backend (Formspree/Cloudflare worker) so photos come in with the form instead of via the messaging app.
 - Before/after sliders once real pairs exist (desktop: one viewer beside services, swapping on hover; phone: one under each row).
-- Make "Gutters clear" visible in the world: a gutter edge along the top of the slab that the wand can flush.
+- Make "Gutters clear" literal: leaves collect in the gutter line and the wand flushes them out.
+- Seasonal swap of the tree (bare in winter, green in spring) with the same house.
 - Seasonal headline swap (spring: "Siding, driveway, deck: back to new").
 - A small "your town" detector line ("Serving Brick") from the form's town choice.
 
@@ -51,3 +49,6 @@
 
 ## Review round
 One Impeccable finish review (verdict: fix). Applied: driveway read of the slab, brighter clean stripe + slower regrow, drawn wand, desktop hero card, CTAs → form, desktop send order, honest message/claims, contrast on "Not on the list?". Detector clean before and after.
+
+## Hero v2 (Ellie's sketch)
+Replaced the slab + desktop picker card with the tree/house/driveway scene. The picker card is gone because the house now fills the desktop hero's right half; service rows below still preselect the quote form.
