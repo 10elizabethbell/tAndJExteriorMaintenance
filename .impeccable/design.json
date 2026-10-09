@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-08T15:49:55+00:00",
+  "generatedAt": "2026-10-09T00:06:00+00:00",
   "title": "Design System: T&J Exterior Maintenance",
   "extensions": {
     "colorMeta": {
@@ -217,16 +217,16 @@
       "field-line": {
         "role": "neutral",
         "displayName": "Field Line",
-        "canonical": "oklch(83.2% 0.022 83)",
+        "canonical": "oklch(62.3% 0.026 82)",
         "tonalRamp": [
-          "#100a02",
-          "#292318",
-          "#453f32",
-          "#645d50",
-          "#847c6f",
-          "#a59d8f",
-          "#cbc3b4",
-          "#f6eede"
+          "#110a01",
+          "#2b2416",
+          "#494133",
+          "#696051",
+          "#8a8171",
+          "#ada493",
+          "#d2c8b7",
+          "#f7eddc"
         ]
       },
       "field-fill": {
@@ -258,12 +258,147 @@
           "#ff9e81",
           "#ffd1b8"
         ]
+      },
+      "error-line": {
+        "role": "error",
+        "displayName": "Error Line",
+        "canonical": "oklch(57.8% 0.157 38)",
+        "tonalRamp": [
+          "#230000",
+          "#470e00",
+          "#742202",
+          "#a73506",
+          "#ce5934",
+          "#f67d57",
+          "#fdb59f",
+          "#fee9e3"
+        ]
+      },
+      "rust-text": {
+        "role": "secondary",
+        "displayName": "Rust Text",
+        "canonical": "oklch(48.9% 0.133 39)",
+        "tonalRamp": [
+          "#210000",
+          "#460f00",
+          "#742301",
+          "#9d401e",
+          "#c36342",
+          "#eb8664",
+          "#feb59c",
+          "#ffe9e2"
+        ]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder",
+        "canonical": "oklch(55.7% 0.020 261)",
+        "tonalRamp": [
+          "#070b14",
+          "#20252f",
+          "#3c424d",
+          "#5b626d",
+          "#7c838f",
+          "#9ea5b2",
+          "#c2cad7",
+          "#e7effd"
+        ]
+      },
+      "dusk-sky": {
+        "role": "neutral",
+        "displayName": "Dusk Sky",
+        "canonical": "oklch(36.5% 0.064 252)",
+        "tonalRamp": [
+          "#000a25",
+          "#0a2643",
+          "#284463",
+          "#466485",
+          "#6785a8",
+          "#88a8cd",
+          "#accdf2",
+          "#e3f0ff"
+        ]
+      },
+      "dusk-floor": {
+        "role": "neutral",
+        "displayName": "Dusk Floor",
+        "canonical": "oklch(35.0% 0.062 253)",
+        "tonalRamp": [
+          "#000a24",
+          "#0c2642",
+          "#294462",
+          "#486384",
+          "#6885a7",
+          "#8aa8cb",
+          "#adccf1",
+          "#e3f0ff"
+        ]
+      },
+      "pitch-on-scene": {
+        "role": "neutral",
+        "displayName": "Dusk Haze",
+        "canonical": "oklch(89.7% 0.016 254)",
+        "tonalRamp": [
+          "#070c12",
+          "#20262d",
+          "#3c434b",
+          "#5b626b",
+          "#7c838c",
+          "#9ea6af",
+          "#c2cad4",
+          "#e7eff9"
+        ]
+      },
+      "scene-shadow": {
+        "role": "neutral",
+        "displayName": "Scene Shadow",
+        "canonical": "rgba(10,18,30,.6) (base oklch(18.1% 0.028 258))",
+        "tonalRamp": [
+          "#050b17",
+          "#1d2533",
+          "#394351",
+          "#586271",
+          "#788393",
+          "#9ba6b7",
+          "#becadc",
+          "#e5efff"
+        ]
+      },
+      "panel-text": {
+        "role": "neutral",
+        "displayName": "Panel Slate",
+        "canonical": "oklch(38.6% 0.026 253)",
+        "tonalRamp": [
+          "#040c16",
+          "#1c2632",
+          "#384350",
+          "#576270",
+          "#778492",
+          "#9aa6b6",
+          "#bdcbda",
+          "#e4f0ff"
+        ]
+      },
+      "ticket-line": {
+        "role": "neutral",
+        "displayName": "Ticket Dash",
+        "canonical": "oklch(83.2% 0.022 83)",
+        "tonalRamp": [
+          "#100a02",
+          "#2a2419",
+          "#484135",
+          "#676053",
+          "#898173",
+          "#aca496",
+          "#d0c8b9",
+          "#f6eede"
+        ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Hero headline (and the closing h2 at clamp(2.3rem,10vw,5rem)); 900 uppercase; accent words in orange."
+        "purpose": "Hero headline (scene shadow; clamp(3.2rem,4.6vw,4.6rem) at 1000px+) and the closing h2 at clamp(2.3rem,10vw,5rem); 900 uppercase; accent words in orange."
       },
       "headline": {
         "displayName": "Headline",
@@ -271,11 +406,11 @@
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Service row h3s (22px); card titles at 24px; promise titles at 19px."
+        "purpose": "Service row h3s (22px); quote card h3 at 24px; promise titles at 19px."
       },
       "pitch": {
         "displayName": "Pitch",
-        "purpose": "The one line under the hero headline; max 20px, max 36ch."
+        "purpose": "The one line under the hero headline, in pitch-on-scene with the scene shadow; max 20px, max 36ch."
       },
       "lede": {
         "displayName": "Lede",
@@ -292,13 +427,17 @@
       "button": {
         "displayName": "Button",
         "purpose": "All buttons; phone numbers inside drop to 700 at 85% opacity."
+      },
+      "hint": {
+        "displayName": "Hint",
+        "purpose": "The hero wash hint pill only; transient instruction, not reading text."
       }
     },
     "shadows": [
       {
         "name": "card-lift",
         "value": "0 24px 50px -24px rgba(5,12,22,.7)",
-        "purpose": "Quote card and desktop hero-pick panel floating on dusk."
+        "purpose": "Quote card floating on dusk."
       },
       {
         "name": "button-primary",
@@ -309,6 +448,11 @@
         "name": "focus-halo",
         "value": "0 0 0 4px rgba(232,137,43,.25)",
         "purpose": "Inputs on focus, with border turning orange."
+      },
+      {
+        "name": "scene-shadow",
+        "value": "text-shadow: 0 2px 6px rgba(10,18,30,.6)",
+        "purpose": "Hero headline and pitch only, so type holds over the canopy, roof and siding."
       },
       {
         "name": "frosted-top-bar",
@@ -348,19 +492,29 @@
         "purpose": "Skips invisible items and wakes the loop on re-entry."
       },
       {
+        "name": "autopilot",
+        "value": "damped spring (k 14, damping 5.5), 3 siding targets then 3 driveway targets, 1.4s each, strength .75",
+        "purpose": "Hero wand after idleMs of stillness."
+      },
+      {
+        "name": "canopy-spring",
+        "value": "stiffness 38, damping 6.5; push radius 70px phone / 100px desktop",
+        "purpose": "Canopy clusters dodge the wand and spring back; a hard shove (>260px/s) shakes leaves loose."
+      },
+      {
         "name": "reduced-motion",
         "value": "loop never starts; still frame",
-        "purpose": "Hero draws one pre-washed stripe; leaves rest; seams render at t=0; CSS transitions .01ms; no smooth scroll."
+        "purpose": "Hero draws one still frame with a clean stripe washed across the siding and another across the driveway, canopy and resting leaves in place; leaf zones rest; seams render at t=0; CSS transitions .01ms; no smooth scroll."
       },
       {
         "name": "TUNE",
-        "value": "leavesPhone 16, leavesDesktop 34, zoneLeavesPhone 7, zoneLeavesDesktop 14, brushPhone 24, brushDesktop 34, regrow 0.0009, wetFade 0.03, idleMs 3200, blowRadius 90, blowForce 520, seamSpeed 1.0",
+        "value": "leavesPhone 44, leavesDesktop 90, canopyPhone 70, canopyDesktop 95, wind 1.0, zoneLeavesPhone 7, zoneLeavesDesktop 14, brushPhone 24, brushDesktop 34, regrow 0.0009, wetFade 0.03, idleMs 3200, blowRadius 90, blowForce 520, seamSpeed 1.0",
         "purpose": "Single place to tune the living elements."
       }
     ],
     "breakpoints": [
       {
-        "name": "tablet",
+        "name": "tablet-and-scene",
         "value": "760px"
       },
       {
@@ -368,7 +522,7 @@
         "value": "900px"
       },
       {
-        "name": "hero-split",
+        "name": "hero-copy-cap",
         "value": "1000px"
       },
       {
@@ -435,6 +589,22 @@
       "css": ".ds-day{background:#f3eee5;padding:24px;} .ds-row{display:grid;grid-template-columns:1fr 44px;align-items:center;gap:14px;padding:20px 2px;border-bottom:2px solid #e7e0d3;text-decoration:none;color:#16263a;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;} .ds-row h3{margin:0;font:900 22px/.98 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;text-transform:uppercase;letter-spacing:-.01em;} .ds-row p{margin:6px 0 0;font-size:16px;line-height:1.45;color:#4f5b69;} .ds-go{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#16263a;color:#f3eee5;transition:transform .3s cubic-bezier(.16,1,.3,1),background-color .2s;} .ds-go svg{width:20px;height:20px;} .ds-row:hover .ds-go{transform:translateX(4px) scale(1.06);background:#e8892b;color:#16263a;} .ds-fall{background:linear-gradient(90deg,rgba(232,137,43,.16),rgba(232,137,43,0) 80%);padding-left:16px;} .ds-fall .ds-go{background:#e8892b;color:#16263a;}"
     },
     {
+      "name": "Hero Wash Hint",
+      "kind": "custom",
+      "refersTo": "hero-hint",
+      "description": "Translucent navy pill at the bottom-left of the hero ground band; fades out the first time the visitor washes.",
+      "html": "<div class=\"ds-scene\"><div class=\"ds-hint\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 11V5.5a1.5 1.5 0 0 1 3 0V11m0-1.5a1.5 1.5 0 0 1 3 0V11m0-.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-.6a6 6 0 0 1-4.8-2.4L4 15.5a1.6 1.6 0 0 1 2.4-2L9 15.5\"/></svg>Drag to wash the house and driveway</div></div>",
+      "css": ".ds-scene{background:linear-gradient(180deg,#24405f 0%,#16263a 55%);padding:28px 20px;} .ds-hint{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(22,38,58,.78);color:#f3eee5;font:700 14px/1.55 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;transition:opacity .6s;}"
+    },
+    {
+      "name": "Hero Copy on Scene",
+      "kind": "custom",
+      "refersTo": "display",
+      "description": "Headline and pitch over the dusk scene: cream display with orange accent words, pitch in pitch-on-scene, both carrying the scene shadow.",
+      "html": "<div class=\"ds-scene\"><h1 class=\"ds-h1\">Leaves gone. Gutters clear. <em>Driveway clean.</em></h1><p class=\"ds-pitch\">Fall cleanups and pressure washing for <strong>Ocean &amp; Monmouth County</strong> homes. Free quotes, Mon–Sat.</p></div>",
+      "css": ".ds-scene{background:linear-gradient(180deg,#24405f 0%,#16263a 55%);padding:28px 20px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;} .ds-h1{margin:0;color:#f3eee5;font-weight:900;font-size:clamp(2.35rem,10.6vw,5.4rem);line-height:.98;letter-spacing:-.02em;text-transform:uppercase;max-width:12ch;text-wrap:balance;text-shadow:0 2px 6px rgba(10,18,30,.6);} .ds-h1 em{font-style:normal;color:#e8892b;} .ds-pitch{margin:14px 0 0;color:#d6dee8;font-size:clamp(16px,4.5vw,20px);line-height:1.4;max-width:36ch;text-shadow:0 2px 6px rgba(10,18,30,.6);} .ds-pitch strong{color:#f3eee5;font-weight:700;}"
+    },
+    {
       "name": "Phone Thumb Bar",
       "kind": "nav",
       "refersTo": "button-primary",
@@ -452,12 +622,12 @@
   ],
   "narrative": {
     "northStar": "Dusk on a Jersey Shore Driveway",
-    "overview": "The whole system is one evening scene. Dark sections are the navy dusk T&J's own site already uses; light sections are clean concrete in daylight; orange is both T&J's accent and the fall leaf. The trade's material carries the proof: there are no before/after photos, because the hero hands the visitor a grimy driveway slab and a pressure wand, and the \"after\" is whatever they wash themselves. Leaves fall, settle into a bed and get blown off by the same pointer that washes. Water seams sheet across every section boundary.\n\nIt is built for a phone held in one hand inside Facebook's in-app browser. Density is low and the targets are big: 56px pill buttons at full width, 44px-plus everything else, and a sticky thumb bar once the hero buttons scroll away. Type is the system font stack set heavy and uppercase for headings, which is Ellie's confirmed house style for pitch sites (fast, and it has worked), with plain sentence-case body.\n\nIt rejects the stock-hero and icon-card template of the client's current lovable.app site, and it rejects black grounds: the deepest surface (footer) is still blue.",
+    "overview": "The whole system is one evening scene. Dark sections are the navy dusk T&J's own site already uses; light sections are clean concrete in daylight; orange is both T&J's accent and the fall leaf. The trade's own job carries the proof: there are no before/after photos, because the hero is a dusk street scene (a big fall tree, a dirty house, a driveway running down from its garage) and the visitor's finger is the pressure wand. The \"after\" is whatever they wash themselves, and the grime creeps back so the job is never quite done. Leaves fall from the tree, settle on the roof, yard and driveway, and get blown about by the same pointer that washes. Water seams sheet across every section boundary.\n\nIt is built for a phone held in one hand inside Facebook's in-app browser. Density is low and the targets are big: 56px pill buttons at full width, 44px-plus everything else, and a sticky thumb bar once the hero buttons scroll away. Type is the system font stack set heavy and uppercase for headings (the stack is a PRODUCT.md constraint for this pitch site: fast inside the in-app browser), with plain sentence-case body.\n\nIt rejects the stock-hero and icon-card template of the client's current lovable.app site, and it rejects black grounds: the deepest surface (footer) is still blue.",
     "keyCharacteristics": [
       "Navy/cream alternating grounds joined by animated wet-edge seams, never a straight color edge.",
-      "One accent, orange, used for the primary action, the leaf and the focus ring.",
+      "One accent, orange, used for the primary action, the leaf and the focus ring on dark grounds (navy on cream, for 3:1).",
       "One button component: same 2px orange outline, same 56px height, two fills.",
-      "A living hero made of the trade's material (concrete, grime, water, leaves) that reacts to finger and mouse.",
+      "A living hero drawn from the trade's own job (a dirty house, a driveway, a fall tree, water, leaves) that reacts to finger and mouse.",
       "Everything animated runs on one shared loop, pauses off screen, and becomes a still frame under reduced motion."
     ],
     "rules": [
@@ -478,17 +648,17 @@
       },
       {
         "name": "The 16px Floor Rule",
-        "body": "Reading text is never below 16px on phones; 15px is reserved for footnote-grade lines (footer, errors, the ticket).",
+        "body": "Reading text is never below 16px on phones; 15px is reserved for footnote-grade lines (footer, errors, the ticket), and the 14px hero hint is a transient instruction, not reading text.",
         "section": "typography"
       },
       {
         "name": "The First-Screen Rule",
-        "body": "At 390px the first viewport holds wordmark + call pill, the three-line benefit headline, the one-line pitch, both full-width buttons, and the top of the washable slab. Nothing pushes the slab below the fold.",
+        "body": "At 390px the first viewport holds wordmark + call pill, the three-line benefit headline under the canopy, the one-line pitch, both full-width buttons, and the washable scene: the house beside and behind the copy and the head of the driveway under the buttons. Nothing pushes the scene below the fold.",
         "section": "layout"
       },
       {
         "name": "The Proof-in-the-Hole Rule",
-        "body": "When a wide layout opens a column, it is filled with something working (the hero-pick chips, the quote card), never left empty.",
+        "body": "When a wide layout opens a column, it is filled with something working (the washable house in the hero's right half, the quote card beside the steps), never left empty.",
         "section": "layout"
       },
       {
@@ -501,7 +671,8 @@
       "**Do** keep every button on the one component: 2px `orange` outline, 56px minimum height, pill shape, primary or ghost fill only.",
       "**Do** join any new section to its neighbor with a wet-edge seam whose fill follows the line, using the two grounds' exact token values.",
       "**Do** register any new animated element with the shared loop and its own off-screen pause, and give it a still frame under reduced motion.",
-      "**Do** keep the slab directly under the hero buttons in the first phone viewport, and let touch scroll vertically over it.",
+      "**Do** keep the washable house and the head of the driveway in the first phone viewport, composed from the copy's measured positions, and let touch scroll vertically over the scene.",
+      "**Do** give any type set over the hero scene the scene shadow and a color at least as light as `pitch-on-scene`.",
       "**Do** make the whole row or card the link, with a single 44px arrow-in-a-circle cue.",
       "**Do** offer calling beside any text option, and keep the copy button a convenience with a visible fallback.",
       "**Do** put hover-only effects under `(hover: hover)`; every interaction must work by tap and drag.",
@@ -510,10 +681,11 @@
     "donts": [
       "**Don't** use a black or near-black ground; the darkest surface is `navy-3`.",
       "**Don't** introduce a second UI accent; orange is the action, the leaf and the focus.",
-      "**Don't** add thin white highlight lines, inset rims or glints to buttons, cards or leaves.",
-      "**Don't** use stock or AI before/after photos as proof; the slab is the proof.",
+      "**Don't** add thin white highlight lines, inset rims or glints to buttons, cards, leaves or the scene.",
+      "**Don't** use stock or AI before/after photos as proof; the washable house and driveway are the proof.",
       "**Don't** set body, labels, buttons or chips in uppercase.",
-      "**Don't** take `field-line` (1.65:1 on its fill) or the orange focus ring on cream (2.3:1) as the standard for a new control's only boundary or focus indicator; both sit below the 3:1 non-text floor and are recorded as open defects, not precedent.",
+      "**Don't** lighten `field-line` or use the orange focus ring on cream: both drop below the 3:1 non-text floor (orange on cream is 2.3:1).",
+      "**Don't** use `ticket-line` as the boundary of anything interactive; it is decoration on a read-only panel.",
       "**Don't** show the thumb bar on screens 760px and wider, or while the hero buttons or the quote card are already in view."
     ]
   }
