@@ -1,0 +1,44 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "primary font: roboto",
+        "createdAt": "2026-10-09T01:42:36.135Z",
+        "reason": "Ellie's pitch-site house style (ellie-taste.md §2): system font stack on purpose; roboto is the Android member of that stack"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "line-height 1.02x (need >=1.3)",
+        "createdAt": "2026-10-09T01:42:36.208Z",
+        "reason": "Ellie's house style (ellie-taste.md §2): heavy uppercase display headings set tight; short 1-4 line heads, not body copy"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "text-transform: uppercase on 67 chars of body text",
+        "createdAt": "2026-10-09T01:42:36.280Z",
+        "reason": "Ellie's house style (ellie-taste.md §2): uppercase applies to headings, the pull-quote heading and short caption labels only"
+      },
+      {
+        "rule": "clipped-overflow-container",
+        "value": "body clips a positioned child",
+        "createdAt": "2026-10-09T01:42:36.353Z",
+        "reason": "Claude: body overflow-x:hidden guards phone sideways scroll; clipped children are decorative canvases, no menus or tooltips"
+      },
+      {
+        "rule": "clipped-overflow-container",
+        "value": "section.hero clips a positioned child",
+        "createdAt": "2026-10-09T01:42:36.428Z",
+        "reason": "Claude: the hero clips its full-bleed scene canvas on purpose; nothing in it needs to escape"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "sizes: 13px, 14px, 15px, 16px, 17px, 18px, 22px, 24px (ratio 1.8:1)",
+        "createdAt": "2026-10-09T01:42:36.501Z",
+        "reason": "Claude: false positive, the list omits the fluid display/headline clamps (up to 86px), real ratio is ~6.6:1"
+      }
+    ]
+  }
+}
