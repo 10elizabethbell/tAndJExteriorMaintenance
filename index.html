@@ -220,17 +220,10 @@ section{position:relative}
 .hours{margin-top:22px;display:flex;align-items:center;gap:10px;color:var(--muted-on-dark);font-weight:700}
 
 /* ===== Footer ===== */
-footer{background:var(--navy-3);color:var(--muted-on-dark);padding:36px 0 120px;font-size:15px}
+footer{background:var(--navy-3);color:var(--muted-on-dark);padding:36px 0 40px;font-size:15px}
 footer .wrap{display:grid;gap:8px}
 footer b{color:var(--text-on-dark)}
 footer a{text-decoration-color:var(--orange);text-underline-offset:3px}
-@media (min-width:760px){footer{padding-bottom:40px}}
-
-/* ===== Sticky thumb bar (phones) ===== */
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(15,28,43,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transform:translateY(110%);transition:transform .45s cubic-bezier(.16,1,.3,1)}
-.bar.on{transform:none}
-.bar .btn{min-height:52px;font-size:16px;padding:0 10px}
-@media (min-width:760px){.bar{display:none}}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -277,7 +270,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <h1>Leaves gone. Gutters clear. <em>Driveway clean.</em></h1>
     <p class="pitch">Fall cleanups and pressure washing for <strong>Ocean &amp; Monmouth County</strong> homes. Free quotes, Mon–Sat.</p>
     <div class="cta" id="heroCta">
-      <a class="btn btn-primary" href="#quoteForm">Get a free quote <svg class="i"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="#quoteForm">Get a free quote <svg class="i"><use href="#i-arrow"/></svg></a>
     </div>
     </div>
   </div>
@@ -476,10 +469,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </div>
 </footer>
 
-<nav class="bar" id="bar" aria-label="Quick contact">
-  <a class="btn btn-ghost" href="tel:+17326446757"><svg class="i"><use href="#i-phone"/></svg>Call</a>
-  <a class="btn btn-primary" href="#quoteForm">Free quote</a>
-</nav>
 
 <script>
 /* ===== Tunables ===== */
@@ -1196,6 +1185,8 @@ function LeafField(canvas, opts){
     function set(v){ p = Math.max(0, Math.min(100, v)); ba.style.setProperty('--p', p + '%'); knob.setAttribute('aria-valuenow', Math.round(p)); }
     function fromX(x){ var r = ba.getBoundingClientRect(); set((x - r.left) / r.width * 100); }
     function load(){
+      // the photo blocks sit at the end of the page; on a slow phone connection they may not have arrived yet
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', load); return; }
       ['before', 'after'].forEach(function(k){ var img = ba.querySelector('.ba-' + k), d = document.getElementById(ba.getAttribute('data-' + k)); if (d && !img.dataset.loaded) { img.dataset.loaded = 1; img.src = 'data:image/webp;base64,' + d.textContent.trim(); } });
     }
     // one authored moment: the first time it shows, the line wipes across from mostly-before to the middle
@@ -1227,16 +1218,6 @@ function LeafField(canvas, opts){
       else if (e.key === 'Home') { set(0); e.preventDefault(); } else if (e.key === 'End') { set(100); e.preventDefault(); }
     });
   });
-})();
-
-/* ===== Sticky thumb bar: shows once the hero buttons scroll away ===== */
-(function(){
-  var bar = document.getElementById('bar'), cta = document.getElementById('heroCta'), quote = document.getElementById('quoteForm');
-  if (!('IntersectionObserver' in window)) { bar.classList.add('on'); return; }
-  var ctaVis = true, formVis = false;
-  function upd(){ bar.classList.toggle('on', !ctaVis && !formVis); }
-  new IntersectionObserver(function(es){ ctaVis = es[0].isIntersecting; upd(); }).observe(cta);
-  new IntersectionObserver(function(es){ formVis = es[0].isIntersecting; upd(); }, { threshold: .15 }).observe(quote);
 })();
 
 /* ===== Quote builder: composes one message for text or email ===== */

@@ -5,7 +5,7 @@
 ## What's built
 - **World:** dusk on a Jersey Shore driveway. Their navy as the ground, their orange as the fall leaf, clean-concrete cream for the light sections. System font, heavy uppercase heads.
 - **Signature (redrawn from Ellie's sketch, 2026-10-08):** the whole hero is one dusk scene. A big fall tree on the left, full of leaf clusters that sway in the wind, drapes over the headline and the roof. A dirty house (black streaks, algae, grimy siding, warm lit windows, garage) sits on the right, and a dirty driveway runs from the garage down-left through the yard. Leaves fall from the tree and pile up on the roof, yard and driveway. Dragging a finger or mouse works as a pressure washer: it cleans the siding and the concrete, blows leaves away, and shoves the canopy, which springs back and shakes leaves loose. Grime creeps back slowly. When nobody touches it, the wand glides between the wall and the drive on its own. Phone: house behind the copy on the right, as sketched. Desktop: same scene with the house in the right half.
-- **Phone:** sticky Call / Free quote bar appears once the hero buttons scroll away and hides while the form is on screen.
+- **Phone:** no sticky bottom bar (Ellie removed it 2026-10-09); the sticky top bar's call pill keeps calling one tap away. The hero's "Get a free quote" is orange-outlined, not filled.
 - Tunables are in `TUNE` (also `canopyPhone/canopyDesktop` leaf clusters and `wind` sway speed) at the top of the script (leaf counts, brush size, regrow speed, dry speed, autopilot delay, seam speed).
 
 ## Assumptions I made
