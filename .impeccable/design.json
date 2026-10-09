@@ -446,8 +446,8 @@
       },
       {
         "name": "focus-halo",
-        "value": "0 0 0 4px rgba(232,137,43,.25)",
-        "purpose": "Inputs on focus, with border turning orange."
+        "value": "0 0 0 4px rgba(47,106,168,.22)",
+        "purpose": "Inputs on focus, with border turning blue."
       },
       {
         "name": "scene-shadow",
@@ -568,9 +568,9 @@
       "name": "Text Field",
       "kind": "input",
       "refersTo": "input",
-      "description": "Quote-builder input: 52px, 14px corner, orange border and halo on focus, brick outline + message when invalid.",
+      "description": "Quote-builder input: 52px, 14px corner, blue border and halo on focus, brick outline + message when invalid.",
       "html": "<div class=\"ds-day\"><label class=\"ds-label\" for=\"ds-n\">Your name</label><input class=\"ds-input\" id=\"ds-n\" placeholder=\"First name is fine\"><div class=\"ds-bad\"><label class=\"ds-label\" for=\"ds-p\">Best number to reach you</label><input class=\"ds-input\" id=\"ds-p\" value=\"732 555\"><p class=\"ds-err\">Add a phone number with area code (10 digits) so T&amp;J can call or text back.</p></div></div>",
-      "css": ".ds-day{background:#f3eee5;padding:24px;color:#16263a;} .ds-label{display:block;font:800 16px/1.4 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;margin:0 0 8px;} .ds-input{width:100%;box-sizing:border-box;min-height:52px;padding:12px 14px;border-radius:14px;border:2px solid #8f8676;background:#fffdf8;color:#16263a;font:500 17px/1.3 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;appearance:none;margin-bottom:18px;} .ds-input::placeholder{color:#6d7480;} .ds-input:focus{outline:none;border-color:#e8892b;box-shadow:0 0 0 4px rgba(232,137,43,.25);} .ds-bad .ds-input{border-color:#c4502a;margin-bottom:0;} .ds-err{margin:8px 0 0;color:#a3361b;font:700 15px/1.4 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;}"
+      "css": ".ds-day{background:#f3eee5;padding:24px;color:#16263a;} .ds-label{display:block;font:800 16px/1.4 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;margin:0 0 8px;} .ds-input{width:100%;box-sizing:border-box;min-height:52px;padding:12px 14px;border-radius:14px;border:2px solid #8f8676;background:#fffdf8;color:#16263a;font:500 17px/1.3 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;appearance:none;margin-bottom:18px;} .ds-input::placeholder{color:#6d7480;} .ds-input:focus{outline:none;border-color:#e8892b;box-shadow:0 0 0 4px rgba(47,106,168,.22);} .ds-bad .ds-input{border-color:#c4502a;margin-bottom:0;} .ds-err{margin:8px 0 0;color:#a3361b;font:700 15px/1.4 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;}"
     },
     {
       "name": "Quote Card",
