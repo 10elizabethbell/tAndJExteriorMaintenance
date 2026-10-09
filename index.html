@@ -10,6 +10,12 @@
 <meta name="theme-color" content="#16263a">
 <meta property="og:title" content="T&amp;J Exterior Maintenance">
 <meta property="og:description" content="Fall cleanups and pressure washing for Ocean &amp; Monmouth County homes. Free quotes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://10elizabethbell.github.io/tAndJExteriorMaintenance/">
+<meta property="og:image" content="https://10elizabethbell.github.io/tAndJExteriorMaintenance/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="T&amp;J Exterior Maintenance: a fall tree dropping leaves over a house and driveway, half pressure-washed clean">
 <style>
 /* ===== Tokens ===== */
 :root{
@@ -19,17 +25,15 @@
   --ink:#16263a;
   --cream:#f3eee5;     /* clean concrete daylight */
   --cream-2:#e7e0d3;
-  --concrete:#cbc6bb;
   --orange:#e8892b;    /* their orange accent = the leaf */
   --orange-hi:#f29a3f;
   --rust:#b5502a;
-  --gold:#e6b44a;
-  --mist:#cfe3f0;
   --hover-blue:#2f6aa8; /* form hover outline */
   --text-on-dark:#f3eee5;
+  --text-on-dark-2:#d6dee8;
   --muted-on-dark:#b7c3d1;
   --muted-on-light:#4f5b69;
-  --radius:18px;
+  --error:#a3361b;
   --gutter:20px;
   --btn-h:56px;
   --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
@@ -43,9 +47,12 @@ body{margin:0;background:var(--navy);color:var(--text-on-dark);font:400 17px/1.5
 input,select,textarea{caret-color:var(--hover-blue)}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:10px}
-.on-light :focus-visible,.quote :focus-visible{outline-color:var(--navy)}
+.on-light :focus-visible{outline-color:var(--navy)}
+.quote :focus-visible{outline-color:var(--hover-blue)}
 h1,h2,h3{font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.98;margin:0;text-wrap:balance}
 p{margin:0}
+p,li{text-wrap:pretty}
+.tel{white-space:nowrap}
 .wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 var(--gutter)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
@@ -60,7 +67,6 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
   .btn-primary:hover{background:var(--orange-hi);transform:translateY(-2px)}
   .btn-ghost:hover{background:rgba(232,137,43,.14);transform:translateY(-2px)}
 }
-.btn .num{font-weight:700;opacity:.85}
 
 /* ===== Top bar ===== */
 .top{position:sticky;top:0;z-index:30;background:rgba(22,38,58,.88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
@@ -68,9 +74,10 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .mark{display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--text-on-dark)}
 .mark b{font-weight:900;font-size:24px;letter-spacing:-.03em;color:var(--orange)}
 .mark span{font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;line-height:1.1}
-.top-call{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:999px;border:2px solid rgba(232,137,43,.6);text-decoration:none;font-weight:800;font-size:15px}
+.top-call{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:999px;border:2px solid var(--orange);text-decoration:none;font-weight:800;font-size:15px;transition:background-color .2s}
 .top-call .t{display:none}
-@media (min-width:760px){.top-call .t{display:inline}}
+@media (min-width:760px){.top-call .t{display:inline}.top-call .c{display:none}}
+@media (hover:hover){.top-call:hover{background:rgba(232,137,43,.14)}}
 
 /* ===== Hero ===== */
 .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#24405f 0%,var(--navy) 55%)}
@@ -78,8 +85,8 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .hero-copy{position:relative;z-index:2;padding-top:22px;pointer-events:none}
 .hero-copy a,.hero-copy button{pointer-events:auto}
 .hero h1{font-size:clamp(2.35rem,10.6vw,5.4rem);max-width:12ch}
-.hero h1 em{font-style:normal;color:var(--orange-hi)}
-.pitch{margin-top:14px;font-size:clamp(16px,4.5vw,20px);line-height:1.4;color:#d6dee8;max-width:36ch}
+.hero h1 em{font-style:normal;color:var(--orange-hi);text-shadow:0 0 14px rgba(10,18,30,.9),0 2px 4px rgba(10,18,30,.8)}
+.pitch{margin-top:14px;font-size:clamp(17px,4.6vw,20px);line-height:1.4;color:var(--text-on-dark-2);max-width:36ch}
 .pitch strong{color:var(--text-on-dark);font-weight:700}
 .cta{display:grid;gap:12px;margin-top:22px}
 .hero h1,.pitch{text-shadow:0 2px 6px rgba(10,18,30,.6)}
@@ -88,14 +95,21 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
   .hero h1{font-size:clamp(3.2rem,4.6vw,4.6rem)}
 }
 .slab-space{height:clamp(170px,30vh,330px);height:clamp(170px,30svh,330px);position:relative;touch-action:pan-y}
-.hint{position:absolute;left:var(--gutter);bottom:18px;z-index:3;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(22,38,58,.78);font-size:14px;font-weight:700;color:var(--text-on-dark);pointer-events:none;transition:opacity .6s}
+.hint{position:absolute;left:var(--gutter);bottom:30px;z-index:3;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(22,38,58,.78);font-size:14px;font-weight:700;color:var(--text-on-dark);pointer-events:none;transition:opacity .6s}
 .hint.gone{opacity:0}
-.hint svg{width:18px;height:18px}
+.hint svg{width:18px;height:18px;animation:nudge 2.6s cubic-bezier(.16,1,.3,1) infinite}
+@keyframes nudge{0%,55%,100%{transform:none}70%{transform:translateX(7px) rotate(-10deg)}}
 @media (min-width:760px){
   .hero-copy{padding-top:64px}
   .cta{grid-template-columns:auto auto;justify-content:start;gap:14px}
   .cta .btn{padding:0 30px}
   .hint{left:max(var(--gutter),calc((100% - 1180px)/2 + var(--gutter)))}
+}
+@media (orientation:landscape) and (max-height:500px){
+  .hero-copy{padding-top:16px}
+  .hero h1{font-size:2.6rem;max-width:22ch}
+  .pitch{margin-top:8px}
+  .cta{margin-top:14px}
 }
 
 /* ===== Seams (animated wet edges between sections) ===== */
@@ -113,16 +127,20 @@ section{position:relative}
 /* ===== Services ===== */
 .svc{margin-top:28px;display:grid;gap:0;border-top:2px solid var(--cream-2)}
 .row{display:grid;grid-template-columns:1fr 44px;align-items:center;gap:14px;padding:20px 2px;border-bottom:2px solid var(--cream-2);text-decoration:none;color:var(--ink);-webkit-tap-highlight-color:transparent}
-.row h3{font-size:22px;letter-spacing:-.01em}
+.row h3{font-size:22px;letter-spacing:0}
 .row p{margin-top:6px;font-size:16px;color:var(--muted-on-light);line-height:1.45}
 .row .go{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:var(--cream);transition:transform .3s cubic-bezier(.16,1,.3,1),background-color .2s}
 .row .go svg{width:20px;height:20px}
 .tag{display:inline-block;margin-left:8px;padding:3px 9px;border-radius:999px;background:var(--orange);color:var(--navy);font-size:13px;font-weight:900;letter-spacing:.04em;vertical-align:4px}
+.row{transition:background-color .12s}
+.row:active{background:rgba(22,38,58,.05)}
+.row:active .go{transform:scale(.9);transition-duration:.1s}
 @media (hover:hover){.row:hover .go{transform:translateX(4px) scale(1.06);background:var(--orange);color:var(--navy)}}
 @media (min-width:900px){
   .svc-grid{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
   .svc{margin-top:0}
   .svc-grid .intro{position:sticky;top:100px}
+  .svc-grid h2,.q-grid h2{font-size:clamp(2.6rem,4.6vw,3.8rem)}
 }
 
 /* ===== Before & after (real T&J jobs) ===== */
@@ -131,7 +149,8 @@ section{position:relative}
 .work .lede{color:var(--muted-on-dark)}
 .ba-grid{display:grid;gap:30px;margin-top:28px}
 .ba{position:relative;border-radius:24px;overflow:hidden;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:ew-resize;background:var(--navy-2);box-shadow:0 24px 50px -24px rgba(5,12,22,.7);--p:50%}
-.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none;user-select:none}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none;user-select:none;opacity:0;transition:opacity .4s cubic-bezier(.16,1,.3,1)}
+.ba.ready img{opacity:1}
 .ba-before{clip-path:inset(0 calc(100% - var(--p)) 0 0)}
 .ba-line{position:absolute;top:0;bottom:0;left:var(--p);width:4px;margin-left:-2px;background:var(--cream);pointer-events:none}
 .ba-knob{position:absolute;top:50%;left:50%;width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;background:var(--orange);color:var(--navy);display:grid;place-items:center;box-shadow:0 8px 18px -10px rgba(6,14,24,.55);pointer-events:auto;cursor:grab}
@@ -142,16 +161,13 @@ section{position:relative}
 .more{display:flex;justify-content:center;margin-top:30px}
 .more .btn{width:100%;max-width:420px}
 .more .btn svg:first-child{width:24px;height:24px}
-@media (min-width:900px){.ba-grid{grid-template-columns:1fr 1fr;gap:36px}}
+@media (min-width:700px){.ba-grid{grid-template-columns:1fr 1fr;gap:36px}}
 
 /* ===== Quote builder ===== */
 .on-dark{background:var(--navy-2);color:var(--text-on-dark)}
-.steps{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:14px;counter-reset:s}
-.steps li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;font-size:17px;color:var(--muted-on-dark)}
-.steps li b{display:block;color:var(--text-on-dark);font-weight:800}
-.steps li::before{counter-increment:s;content:counter(s);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--orange);color:var(--navy);font-weight:900}
 .quote{margin-top:34px;background:var(--cream);color:var(--ink);border-radius:24px;padding:22px 18px 24px;box-shadow:0 24px 50px -24px rgba(5,12,22,.7)}
-.quote h3{font-size:24px}
+.quote h3{font-size:22px;letter-spacing:0}
+@media (max-width:899px){.quote h3{display:none}}
 .field{margin-top:18px}
 .field>label,.legend{display:block;font-weight:800;font-size:16px;margin-bottom:8px}
 .field .opt{font-weight:500;color:var(--muted-on-light)}
@@ -165,11 +181,13 @@ section{position:relative}
 .chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
 .chip span{display:flex;align-items:center;min-height:46px;padding:0 16px;border-radius:999px;border:2px solid #8f8676;background:#fffdf8;font-weight:700;font-size:16px;cursor:pointer;user-select:none;transition:background-color .2s,border-color .2s,transform .2s cubic-bezier(.16,1,.3,1)}
 .chip input:checked+span{background:var(--navy);border-color:var(--navy);color:var(--cream)}
-.chip input:focus-visible+span{outline:3px solid var(--navy);outline-offset:2px}
+.chip input:focus-visible+span{outline:3px solid var(--hover-blue);outline-offset:2px}
 .chip span:active{transform:scale(.96)}
-.err{display:none;margin-top:8px;color:#a3361b;font-weight:700;font-size:15px}
+.chip span.picked{animation:pick .45s cubic-bezier(.16,1,.3,1) both}
+@keyframes pick{from{transform:scale(.88);box-shadow:0 0 0 6px rgba(232,137,43,.45)}}
+.err{display:none;margin-top:8px;color:var(--error);font-weight:700;font-size:15px}
 .bad .err{display:block}
-.bad input,.bad select{border-color:#c4502a}
+.bad input,.bad select,.bad textarea{border-color:var(--error)}
 @media (hover:hover){
   .quote input[type=text]:hover,.quote input[type=tel]:hover,.quote select:hover,.quote textarea:hover,.chip:hover input:not(:checked)+span{border-color:var(--hover-blue)}
   .chip:hover input:checked+span,.quote .btn:hover,.quote .after a:hover,.quote .after button:hover{outline:2px solid var(--hover-blue);outline-offset:2px}
@@ -200,13 +218,15 @@ section{position:relative}
 .towns li{display:flex;align-items:center;gap:10px}
 .towns li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--orange)}
 @media (min-width:520px){.towns{grid-template-columns:repeat(3,1fr)}}
-.counties{margin-top:16px;font-weight:800;color:#9c3f1d}
+.counties{margin-top:16px;font-weight:800;color:var(--ink)}
+.counties a{display:inline-block;padding:12px 0;margin:-12px 0;text-decoration:underline;text-decoration-color:var(--orange);text-underline-offset:4px;text-decoration-thickness:2px}
 .promises{margin-top:44px;display:grid;gap:22px}
 .promise{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
 .promise .dot{width:44px;height:44px;border-radius:50%;background:var(--navy);color:var(--orange);display:grid;place-items:center}
-.promise b{display:block;font-size:19px;font-weight:900;text-transform:uppercase;letter-spacing:-.01em}
+.promise b{display:block;font-size:19px;font-weight:900;text-transform:uppercase;letter-spacing:0}
 .promise p{color:var(--muted-on-light);font-size:16px}
-.quoteline{margin-top:40px;font-size:clamp(1.5rem,6.2vw,2.4rem);font-weight:900;line-height:1.08;letter-spacing:-.02em;text-transform:uppercase;max-width:20ch}
+.quoteline{margin-top:40px;font-size:clamp(1.8rem,7.6vw,2.6rem);font-weight:900;line-height:1.08;letter-spacing:-.02em;text-transform:uppercase;max-width:20ch}
+.quoteline .q{color:var(--orange)}
 .quoteline small{display:block;margin-top:10px;font:600 15px/1.4 var(--font);text-transform:none;letter-spacing:0;color:var(--muted-on-light)}
 @media (min-width:900px){
   .area-grid{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:start}
@@ -225,11 +245,13 @@ section{position:relative}
 footer{background:var(--navy-3);color:var(--muted-on-dark);padding:36px 0 40px;font-size:15px}
 footer .wrap{display:grid;gap:8px}
 footer b{color:var(--text-on-dark)}
-footer a{text-decoration-color:var(--orange);text-underline-offset:3px}
+footer a{display:inline-block;padding:13px 0;margin:-13px 0;text-decoration-color:var(--orange);text-underline-offset:3px}
+@media (hover:hover){footer a:hover{color:var(--text-on-dark)}}
+footer .contact{line-height:2.2}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  *,*::before,*::after{transition-duration:.01ms!important}
+  *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
 }
 </style>
 </head>
@@ -259,7 +281,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <header class="top">
   <div class="wrap">
     <a class="mark" href="#top" aria-label="T&amp;J Exterior Maintenance, back to top"><b>T&amp;J</b><span>Exterior<br>Maintenance</span></a>
-    <a class="top-call" href="tel:+17326446757"><svg class="i"><use href="#i-phone"/></svg><span class="t">(732) 644-6757</span><span class="sr">Call T&amp;J</span></a>
+    <a class="top-call" href="tel:+17326446757"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span class="t">(732) 644-6757</span><span class="c">Call</span></a>
   </div>
 </header>
 
@@ -270,14 +292,14 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="hero-copy wrap">
     <div class="hero-main">
     <h1>Leaves gone. Gutters clear. <em>Driveway clean.</em></h1>
-    <p class="pitch">Fall cleanups and pressure washing for <strong>Ocean &amp; Monmouth County</strong> homes. Free quotes, Mon–Sat.</p>
+    <p class="pitch">Fall cleanups and pressure washing for <strong>Ocean&nbsp;&amp;&nbsp;Monmouth County</strong> homes. Free quotes. Mon–Sat, 7am–7pm.</p>
     <div class="cta" id="heroCta">
-      <a class="btn btn-ghost" href="#quoteForm">Get a free quote <svg class="i"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="#quoteForm">Get a free quote <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
     </div>
     </div>
   </div>
   <div class="slab-space" id="slab" role="img" aria-label="A dirty house and driveway under a big fall tree dropping leaves; drag across them to pressure-wash them clean">
-    <div class="hint" id="hint"><svg class="i"><use href="#i-hand"/></svg>Drag to wash the house and driveway</div>
+    <div class="hint" id="hint"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-hand"/></svg>Drag to wash the house and driveway</div>
   </div>
 </section>
 
@@ -294,7 +316,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <img class="ba-after" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The same driveway after pressure washing: bright, clean concrete" draggable="false">
           <img class="ba-before" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="A driveway before pressure washing: grey, mottled and dark with grime" draggable="false">
           <span class="ba-tag b">Before</span><span class="ba-tag a">After</span>
-          <div class="ba-line"><span class="ba-knob" role="slider" tabindex="0" aria-label="Driveway: drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><svg class="i" viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span></div>
+          <div class="ba-line"><span class="ba-knob" role="slider" tabindex="0" aria-label="Driveway: drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><svg class="i" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span></div>
         </div>
       </figure>
       <figure class="ba-card">
@@ -302,11 +324,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <img class="ba-after" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The same trash bin after cleaning, washed out and spotless" draggable="false">
           <img class="ba-before" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="A trash bin before cleaning, with caked-on garbage in the bottom" draggable="false">
           <span class="ba-tag b">Before</span><span class="ba-tag a">After</span>
-          <div class="ba-line"><span class="ba-knob" role="slider" tabindex="0" aria-label="Trash bin: drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><svg class="i" viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span></div>
+          <div class="ba-line"><span class="ba-knob" role="slider" tabindex="0" aria-label="Trash bin: drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><svg class="i" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span></div>
         </div>
       </figure>
     </div>
-    <div class="more"><a class="btn btn-ghost" href="https://www.facebook.com/groups/717636435063715/user/61590242049806/" target="_blank" rel="noopener"><svg class="i"><use href="#i-fb"/></svg>See more on Facebook <svg class="i"><use href="#i-arrow"/></svg></a></div>
+    <div class="more"><a class="btn btn-ghost" href="https://www.facebook.com/groups/717636435063715/user/61590242049806/" target="_blank" rel="noopener"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg>See more on Facebook <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></div>
   </div>
 </section>
 
@@ -317,32 +339,32 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap svc-grid">
     <div class="intro">
       <h2 id="svc-h">Everything outside the front door</h2>
-      <p class="lede">From this fall's leaf pile to the black streaks on the siding. Tap a service to start a quote with it already picked.</p>
+      <p class="lede">From this fall’s leaf pile to the black streaks on the siding. Tap a service to start a quote with it already picked.</p>
     </div>
     <div class="svc">
       <a class="row fall" href="#quoteForm" data-pick="leaf,gutter">
-        <div><h3>Fall cleanup <span class="tag">This season</span></h3><p>Leaf cleanup &amp; disposal · Gutter cleaning</p></div>
-        <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+        <div><h3>Fall cleanup <span class="tag">This season</span></h3><p>Leaf cleanup &amp; disposal&nbsp;· Gutter cleaning</p></div>
+        <span class="go"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span>
       </a>
       <a class="row" href="#quoteForm" data-pick="concrete">
-        <div><h3>Driveways &amp; concrete</h3><p>Driveways · Sidewalks · Patios · Pool areas · Garage floors</p></div>
-        <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+        <div><h3>Driveways&nbsp;&amp; concrete</h3><p>Driveways&nbsp;· Sidewalks&nbsp;· Patios&nbsp;· Pool areas&nbsp;· Garage floors</p></div>
+        <span class="go"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span>
       </a>
       <a class="row" href="#quoteForm" data-pick="house">
-        <div><h3>House washing</h3><p>Vinyl · Stucco · Brick · Siding · Trim · Black streak removal · Algae treatment · Moss removal · Low-pressure cleaning</p></div>
-        <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+        <div><h3>House washing</h3><p>Vinyl&nbsp;· Stucco&nbsp;· Brick&nbsp;· Siding&nbsp;· Trim&nbsp;· Black streak removal&nbsp;· Algae treatment&nbsp;· Moss removal&nbsp;· Low-pressure cleaning</p></div>
+        <span class="go"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span>
       </a>
       <a class="row" href="#quoteForm" data-pick="pavers">
-        <div><h3>Pavers</h3><p>Pressure washing · Polymeric sanding · Sealing · Joint repair</p></div>
-        <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+        <div><h3>Pavers</h3><p>Pressure washing&nbsp;· Polymeric sanding&nbsp;· Sealing&nbsp;· Joint repair</p></div>
+        <span class="go"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span>
       </a>
       <a class="row" href="#quoteForm" data-pick="wood">
-        <div><h3>Decks &amp; wood</h3><p>Wood brightening · Sanding · Staining</p></div>
-        <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+        <div><h3>Decks &amp; wood</h3><p>Wood brightening&nbsp;· Sanding&nbsp;· Staining</p></div>
+        <span class="go"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span>
       </a>
       <a class="row" href="#quoteForm" data-pick="commercial">
-        <div><h3>Commercial</h3><p>Storefronts · Apartment complexes · HOAs · Parking lots · Fleet washing</p></div>
-        <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+        <div><h3>Commercial</h3><p>Storefronts&nbsp;· Apartment complexes&nbsp;· HOAs&nbsp;· Parking lots&nbsp;· Fleet washing</p></div>
+        <span class="go"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span>
       </a>
     </div>
   </div>
@@ -355,12 +377,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap q-grid">
     <div>
       <h2 id="q-h">Free quote in about a minute</h2>
-      <p class="lede">Tell T&amp;J what needs doing and send a few photos. No account, no waiting on hold.</p>
-      <ol class="steps">
-        <li><span><b>Pick what needs doing</b>Leaves, gutters, the driveway, the siding: as many as you like.</span></li>
-        <li><span><b>Send it with photos</b>Your message opens ready to go. Add a few photos of the job before you hit send.</span></li>
-        <li><span><b>Get your free estimate</b>T&amp;J replies with a price for the work.</span></li>
-      </ol>
+      <p class="lede">Pick what needs doing and send it by text with a few photos. T&amp;J replies with a free estimate. No account, no waiting on hold.</p>
     </div>
 
     <form class="quote" id="quoteForm" novalidate>
@@ -368,7 +385,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
       <div class="field" id="f-svc">
         <span class="legend" id="svc-legend">What needs doing?</span>
-        <div class="chips" role="group" aria-labelledby="svc-legend">
+        <div class="chips" id="svc-group" role="group" aria-labelledby="svc-legend">
           <label class="chip"><input type="checkbox" name="svc" value="leaf" data-label="Leaf cleanup &amp; disposal"><span>Leaf cleanup</span></label>
           <label class="chip"><input type="checkbox" name="svc" value="gutter" data-label="Gutter cleaning"><span>Gutters</span></label>
           <label class="chip"><input type="checkbox" name="svc" value="concrete" data-label="Driveway / concrete washing"><span>Driveway &amp; concrete</span></label>
@@ -383,39 +400,39 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
       <div class="field" id="f-name">
         <label for="q-name">Your name</label>
-        <input id="q-name" type="text" autocomplete="name" placeholder="First name is fine" aria-describedby="e-name">
-        <p class="err" id="e-name">Add your name so T&amp;J knows who's asking.</p>
+        <input id="q-name" type="text" autocomplete="name" placeholder="First name is fine" aria-required="true" maxlength="60">
+        <p class="err" id="e-name">Add your name so T&amp;J knows who’s asking.</p>
       </div>
 
       <div class="field" id="f-phone">
         <label for="q-phone">Best number to reach you</label>
-        <input id="q-phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(732) 555-0123" aria-describedby="e-phone">
+        <input id="q-phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(732) 555-0123" aria-required="true" maxlength="20">
         <p class="err" id="e-phone">Add a phone number with area code (10 digits) so T&amp;J can call or text back.</p>
       </div>
 
       <div class="field" id="f-town">
         <label for="q-town">Town</label>
-        <select id="q-town" aria-describedby="e-town">
+        <select id="q-town" aria-required="true">
           <option value="">Choose your town</option>
           <option>Toms River</option><option>Brick</option><option>Point Pleasant</option><option>Lakewood</option><option>Jackson</option><option>Manchester</option><option>Seaside Heights</option><option>Lavallette</option><option>Bay Head</option><option>Mantoloking</option><option>Forked River</option><option>Beachwood</option><option>Ocean Gate</option><option>Lacey</option><option>Wall Township</option><option>Howell</option><option>Freehold</option>
           <option value="Other">Somewhere else nearby</option>
         </select>
-        <p class="err" id="e-town">Choose your town, or "Somewhere else nearby".</p>
+        <p class="err" id="e-town">Choose your town, or “Somewhere else nearby”.</p>
       </div>
 
       <div class="field">
         <label for="q-notes">Anything T&amp;J should know? <span class="opt">(optional)</span></label>
-        <textarea id="q-notes" placeholder="Two-car driveway, gutters on a two-story house, hoping to get it done before Thanksgiving..."></textarea>
+        <textarea id="q-notes" maxlength="600" placeholder="Two-car driveway, gutters on a two-story house, hoping to get it done before Thanksgiving…"></textarea>
       </div>
 
-      <div class="photos"><svg class="i"><use href="#i-cam"/></svg><span>Photos help T&amp;J price it right. Your message app opens next: attach a few pictures of the job there before you send.</span></div>
+      <div class="photos"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-cam"/></svg><span>Photos help T&amp;J price it right. Your message app opens next: attach a few pictures of the job there before you send.</span></div>
 
       <div class="send">
-        <a class="btn btn-primary" id="sendText" href="sms:+17326446757"><svg class="i"><use href="#i-msg"/></svg><span class="mob">Send by text</span><span class="desk">Text (732) 644-6757</span></a>
+        <a class="btn btn-primary" id="sendText" href="sms:+17326446757"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-msg"/></svg><span class="mob">Send by text</span><span class="desk">Text <span class="tel">(732) 644-6757</span></span></a>
       </div>
       <div class="after">
         <button type="button" id="copyMsg">Copy the message</button>
-        <a href="tel:+17326446757">Or just call (732) 644-6757</a>
+        <a href="tel:+17326446757">Or just call <span class="tel">(732) 644-6757</span></a>
       </div>
       <p class="sr" id="copyStatus" aria-live="polite"></p>
       <div class="ticket" id="ticket" aria-live="polite"></div>
@@ -431,17 +448,17 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap area-grid">
     <div>
       <h2 id="a-h">Local to the shore</h2>
-      <p class="lede">Homes and businesses across Ocean &amp; Monmouth County, including:</p>
+      <p class="lede">Homes and businesses across Ocean&nbsp;&amp;&nbsp;Monmouth County, including:</p>
       <ul class="towns">
         <li>Toms River</li><li>Brick</li><li>Point Pleasant</li><li>Lakewood</li><li>Jackson</li><li>Manchester</li><li>Seaside Heights</li><li>Lavallette</li><li>Bay Head</li><li>Mantoloking</li><li>Forked River</li><li>Beachwood</li><li>Ocean Gate</li><li>Lacey</li><li>Wall Township</li><li>Howell</li><li>Freehold</li>
       </ul>
-      <p class="counties">Not on the list? Ask anyway.</p>
+      <p class="counties">Not on the list? <a href="#quoteForm">Ask anyway.</a></p>
     </div>
     <div class="promises">
-      <div class="promise"><span class="dot"><svg class="i"><use href="#i-shield"/></svg></span><div><b>Fully insured</b><p>Ask T&amp;J for proof of insurance with your quote.</p></div></div>
-      <div class="promise"><span class="dot"><svg class="i"><use href="#i-home"/></svg></span><div><b>Locally owned</b><p>A local Shore crew, not a franchise call center.</p></div></div>
-      <div class="promise"><span class="dot"><svg class="i"><use href="#i-tag"/></svg></span><div><b>Free estimates</b><p>Send the job, get a price. No charge to ask.</p></div></div>
-      <p class="quoteline">"We don't leave until you're happy."<small>T&amp;J's promise to every customer</small></p>
+      <div class="promise"><span class="dot"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg></span><div><b>Fully insured</b><p>Ask T&amp;J for proof of insurance with your quote.</p></div></div>
+      <div class="promise"><span class="dot"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-home"/></svg></span><div><b>Locally owned</b><p>A local Shore crew, not a franchise call center.</p></div></div>
+      <div class="promise"><span class="dot"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-tag"/></svg></span><div><b>Free estimates</b><p>Send the job, get a price. No charge to ask.</p></div></div>
+      <p class="quoteline"><span class="q">“</span>We don’t leave until you’re happy.<span class="q">”</span><small>T&amp;J’s promise to every customer</small></p>
     </div>
   </div>
 </section>
@@ -453,12 +470,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <canvas id="closeCanvas" aria-hidden="true"></canvas>
   <div class="wrap">
     <h2 id="c-h">Restore your curb appeal <span>this fall.</span></h2>
-    <p class="lede">T&amp;J Exterior Maintenance. Leaf cleanup, gutters and pressure washing, Ocean &amp; Monmouth County.</p>
     <div class="cta">
-      <a class="btn btn-primary" href="#quoteForm">Get a free quote <svg class="i"><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-ghost" href="tel:+17326446757"><svg class="i"><use href="#i-phone"/></svg>Call <span class="num">(732) 644-6757</span></a>
+      <a class="btn btn-primary" href="#quoteForm">Get a free quote <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="tel:+17326446757"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Call <span class="tel">(732) 644-6757</span></a>
     </div>
-    <p class="hours"><svg class="i"><use href="#i-clock"/></svg>Mon–Sat · 7am–7pm</p>
+    <p class="hours"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg>Mon–Sat · 7am–7pm</p>
   </div>
 </section>
 </main>
@@ -466,8 +482,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <footer>
   <div class="wrap">
     <b>T&amp;J Exterior Maintenance</b>
-    <span>Ocean &amp; Monmouth County, NJ · Mon–Sat 7am–7pm</span>
-    <span><a href="tel:+17326446757">(732) 644-6757</a> · <a href="mailto:tjexteriormaintenance@gmail.com">tjexteriormaintenance@gmail.com</a> · <a href="https://www.facebook.com/groups/717636435063715/user/61590242049806/" target="_blank" rel="noopener">Facebook</a></span>
+    <span>Ocean&nbsp;&amp;&nbsp;Monmouth County, NJ&nbsp;· Mon–Sat&nbsp;7am–7pm</span>
+    <span class="contact"><a class="tel" href="tel:+17326446757">(732) 644-6757</a>&nbsp;· <a href="mailto:tjexteriormaintenance@gmail.com">tjexteriormaintenance@gmail.com</a>&nbsp;· <a href="https://www.facebook.com/groups/717636435063715/user/61590242049806/" target="_blank" rel="noopener">Facebook</a></span>
   </div>
 </footer>
 
@@ -1048,15 +1064,20 @@ function LeafField(canvas, opts){
   ctx = field.ctx;
 
   /* --- the wand --- */
+  // brush and wet stamps are drawn once and reused (was two new gradients per wash step)
+  function stamp(stops){
+    var c = document.createElement('canvas'); c.width = c.height = 128;
+    var x = c.getContext('2d'), g = x.createRadialGradient(64, 64, 0, 64, 64, 64);
+    stops.forEach(function(s){ g.addColorStop(s[0], s[1]); }); x.fillStyle = g; x.fillRect(0, 0, 128, 128);
+    return c;
+  }
+  var brushStamp = stamp([[0, 'rgba(0,0,0,1)'], [.7, 'rgba(0,0,0,.55)'], [1, 'rgba(0,0,0,0)']]);
+  var wetStamp = stamp([[0, 'rgba(235,242,246,.10)'], [1, 'rgba(235,242,246,0)']]);
   function wash(x, y, r, strength){
-    var sx = x * S, sy = y * S, sr = r * S;
-    gctx.save(); gctx.globalCompositeOperation = 'destination-out';
-    var g = gctx.createRadialGradient(sx, sy, 0, sx, sy, sr);
-    g.addColorStop(0, 'rgba(0,0,0,' + strength + ')'); g.addColorStop(.7, 'rgba(0,0,0,' + strength * .55 + ')'); g.addColorStop(1, 'rgba(0,0,0,0)');
-    gctx.fillStyle = g; gctx.beginPath(); gctx.arc(sx, sy, sr, 0, 6.29); gctx.fill(); gctx.restore();
-    var w = wctx.createRadialGradient(sx, sy, 0, sx, sy, sr * 1.2);
-    w.addColorStop(0, 'rgba(235,242,246,.10)'); w.addColorStop(1, 'rgba(235,242,246,0)');
-    wctx.fillStyle = w; wctx.beginPath(); wctx.arc(sx, sy, sr * 1.2, 0, 6.29); wctx.fill();
+    var sx = x * S, sy = y * S, sr = r * S, wr = sr * 1.2;
+    gctx.save(); gctx.globalCompositeOperation = 'destination-out'; gctx.globalAlpha = Math.min(1, strength);
+    gctx.drawImage(brushStamp, sx - sr, sy - sr, sr * 2, sr * 2); gctx.restore();
+    wctx.drawImage(wetStamp, sx - wr, sy - wr, wr * 2, wr * 2);
   }
   function spray(x, y, vx, vy, n){
     for (var i = 0; i < n; i++) {
@@ -1134,6 +1155,8 @@ function LeafField(canvas, opts){
     ctx.globalAlpha = 1;
   }
   if (REDUCED) {
+    hint.classList.add('gone');
+    slabEl.setAttribute('aria-label', 'A fall tree dropping leaves over a house and driveway, half pressure-washed clean');
     for (var k = 0; k <= 24; k++) { wash(lerp(L.x0, L.x1, k / 24), lerp(L.eave, L.ground, .55), brush, .9); wash(lerp(dL(.7), dR(.7), k / 24), dY(.7), brush, .9); }
     draw(0, field.dpr(), -999, -999, false);
   } else Loop.add(heroItem, hero);
@@ -1184,23 +1207,35 @@ function LeafField(canvas, opts){
 (function(){
   document.querySelectorAll('.ba').forEach(function(ba){
     var knob = ba.querySelector('.ba-knob'), p = 50, intro = false;
-    function set(v){ p = Math.max(0, Math.min(100, v)); ba.style.setProperty('--p', p + '%'); knob.setAttribute('aria-valuenow', Math.round(p)); }
+    function set(v){ p = Math.max(0, Math.min(100, v)); ba.style.setProperty('--p', p + '%'); knob.setAttribute('aria-valuenow', Math.round(p)); knob.setAttribute('aria-valuetext', Math.round(p) + '% before, ' + (100 - Math.round(p)) + '% after'); }
     function fromX(x){ var r = ba.getBoundingClientRect(); set((x - r.left) / r.width * 100); }
     function load(){
       // the photo blocks sit at the end of the page; on a slow phone connection they may not have arrived yet
       if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', load); return; }
       ['before', 'after'].forEach(function(k){ var img = ba.querySelector('.ba-' + k), d = document.getElementById(ba.getAttribute('data-' + k)); if (d && !img.dataset.loaded) { img.dataset.loaded = 1; img.src = 'data:image/webp;base64,' + d.textContent.trim(); } });
+      ready();
     }
     // one authored moment: the first time it shows, the line wipes across from mostly-before to the middle
-    function playIntro(){
-      if (intro || REDUCED) return; intro = true;
-      var t0 = performance.now();
-      (function step(now){ var t = Math.min(1, (now - t0) / 1100), e = 1 - Math.pow(2, -10 * t); set(86 - 36 * e); if (t < 1) requestAnimationFrame(step); })(t0);
+    // photos fade in once decoded; the wipe waits for them so it never plays over an empty frame
+    var markReady, decoded = new Promise(function(r){ markReady = r; });
+    function ready(){
+      var imgs = ba.querySelectorAll('img');
+      Promise.all([].map.call(imgs, function(i){ return i.decode ? i.decode().catch(function(){}) : 0; })).then(function(){ ba.classList.add('ready'); markReady(); });
     }
+    function playIntro(){
+      if (intro) return; intro = true;
+      load();
+      decoded.then(function(){
+        if (REDUCED) return;
+        var t0 = performance.now();
+        (function step(now){ var t = Math.min(1, (now - t0) / 1100), e = 1 - Math.pow(2, -10 * t); set(86 - 36 * e); if (t < 1) requestAnimationFrame(step); })(t0);
+      });
+    }
+    set(p);
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function(es, o){ if (es[0].isIntersecting) { load(); o.disconnect(); } }, { rootMargin: '600px' }).observe(ba);
       new IntersectionObserver(function(es, o){ if (es[0].isIntersecting) { playIntro(); o.disconnect(); } }, { threshold: .6 }).observe(ba);
-    } else load();
+    } else { load(); ba.classList.add('ready'); }
     var down = null, dragging = false;
     ba.addEventListener('pointerdown', function(e){
       down = { x: e.clientX, y: e.clientY, id: e.pointerId, touch: e.pointerType !== 'mouse' };
@@ -1244,7 +1279,12 @@ function LeafField(canvas, opts){
     sendText.href = 'sms:' + BIZ.phone + '?&body=' + encodeURIComponent(m);
     window.__quoteMsg = m;
   }
-  function setBad(id, bad){ document.getElementById(id).classList.toggle('bad', bad); }
+  function setBad(id, bad){
+    var el = document.getElementById(id), ctl = id === 'f-svc' ? document.getElementById('svc-group') : el.querySelector('input,select'), err = 'e-' + id.slice(2);
+    el.classList.toggle('bad', bad);
+    if (bad) ctl.setAttribute('aria-describedby', err); else ctl.removeAttribute('aria-describedby');
+    if (id === 'f-svc') ctl.setAttribute('aria-invalid', bad);
+  }
   function validate(){
     var digits = phone.value.replace(/\D/g, '');
     var ok = { svc: services().length > 0, name: name.value.trim().length > 0, phone: digits.length === 10 || (digits.length === 11 && digits[0] === '1'), town: !!town.value };
@@ -1266,13 +1306,14 @@ function LeafField(canvas, opts){
       if (!validate()) { e.preventDefault(); return; }
       ticket.textContent = 'Opening your messages app with this message. Attach your photos, then send:\n\n' + message();
       ticket.classList.add('show');
+      ticket.scrollIntoView({ block: 'nearest', behavior: REDUCED ? 'auto' : 'smooth' });
     });
   });
   document.getElementById('copyMsg').addEventListener('click', function(){
     update();
     var m = message(), status = document.getElementById('copyStatus');
     ticket.textContent = m; ticket.classList.add('show');
-    function done(ok){ status.textContent = ok ? 'Message copied.' : 'Copy blocked here: select the message below and copy it.'; document.getElementById('copyMsg').textContent = ok ? 'Copied' : 'Select the message below'; }
+    function done(ok){ status.textContent = ok ? 'Message copied.' : 'Copy blocked here: select the message below and copy it.'; var b = document.getElementById('copyMsg'); b.textContent = ok ? 'Copied' : 'Select the message below'; clearTimeout(b._t); b._t = setTimeout(function(){ b.textContent = 'Copy the message'; }, 2400); }
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(m).then(function(){ done(true); }, function(){ done(false); });
     else done(false);
   });
@@ -1282,6 +1323,7 @@ function LeafField(canvas, opts){
       var picks = row.getAttribute('data-pick').split(',');
       boxes.forEach(function(b){ b.checked = picks.indexOf(b.value) > -1; });
       setBad('f-svc', false); update();
+      if (!REDUCED) setTimeout(function(){ boxes.forEach(function(b, i){ if (b.checked) { var sp = b.nextElementSibling; sp.classList.remove('picked'); void sp.offsetWidth; sp.style.animationDelay = (i % 3) * 70 + 'ms'; sp.classList.add('picked'); } }); }, 550);
     });
   });
   update();

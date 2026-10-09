@@ -60,3 +60,8 @@ Email send button removed: too many options. The form now sends by text only (`s
 New navy section between Services and the quote form: two drag sliders (driveway, trash bin) built from two before/after composites Ellie supplied as T&J's work. Originals and crops live in `src-assets/work/` (git-ignored); the page embeds 640px WebP crops (q78, ~155KB total) that load only near the viewport. The driveway "before" is shifted 16px to line up with the "after"; the bin shots are framed differently, so the line shows a small jump. Top strip of the bin shots trimmed (vehicle parts).
 - **Confirm with the owner:** that both jobs are theirs, and whether trash-bin cleaning is a service they offer (it's not in their published list; the caption only says "Washed out").
 - More pairs slot in by copying one `<figure class="ba-card">` and adding two `<script type="text/plain" id="img-...">` blocks at the end of the page.
+
+## Impeccable pass, all modes (2026-10-09, Ellie)
+Five read-only reviews (critique+clarify, audit+harden+optimize, adapt+layout, typeset+colorize+polish, animate+delight+distill), fixes applied in one batch. Kept intact: no demo text, no sticky bottom bar, email only in the footer, wordmark favicon, outlined hero button, blue form states.
+- **Facebook preview:** `og.jpg` (1200x630 hero shot) plus og:image/url/type, so links shared in the group show a picture. Regenerate it if the hero changes.
+- **Not applied, on purpose:** cutting the "Free estimates" promise (their own badge); dropping "(Photos below, if I added any.)" from the text (tells the owner photos follow); seams every other frame and a lower phone pixel-ratio cap (needs a real older Android to judge); a full shadow/radius token refactor.

@@ -26,6 +26,7 @@ colors:
   dusk-sky: "#24405f"
   dusk-floor: "#223c5a"
   pitch-on-scene: "#d6dee8"
+  error: "#a3361b"
   scene-shadow: "rgba(10,18,30,.6)"
   panel-text: "#3a4552"
   ticket-line: "#cfc7b8"
@@ -47,10 +48,10 @@ typography:
     fontSize: "22px"
     fontWeight: 900
     lineHeight: 0.98
-    letterSpacing: "-0.01em"
+    letterSpacing: "0"
   pitch:
     fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(16px, 4.5vw, 20px)"
+    fontSize: "clamp(17px, 4.6vw, 20px)"
     fontWeight: 400
     lineHeight: 1.4
   lede:
@@ -79,6 +80,18 @@ typography:
     fontWeight: 900
     lineHeight: 0.98
     letterSpacing: "-0.02em"
+  display-landscape-phone:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "2.6rem"
+    fontWeight: 900
+    lineHeight: 0.98
+    letterSpacing: "-0.02em"
+  headline-side-column:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(2.6rem, 4.6vw, 3.8rem)"
+    fontWeight: 900
+    lineHeight: 0.98
+    letterSpacing: "-0.02em"
   display-desktop-hero:
     fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
     fontSize: "clamp(3.2rem, 4.6vw, 4.6rem)"
@@ -87,22 +100,28 @@ typography:
     letterSpacing: "-0.02em"
   promise-quote:
     fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(1.5rem, 6.2vw, 2.4rem)"
+    fontSize: "clamp(1.8rem, 7.6vw, 2.6rem)"
     fontWeight: 900
     lineHeight: 1.08
     letterSpacing: "-0.02em"
   card-title:
     fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "24px"
+    fontSize: "22px"
     fontWeight: 900
     lineHeight: 0.98
-    letterSpacing: "-0.02em"
+    letterSpacing: "0"
+  wordmark:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "24px"
+    fontWeight: 900
+    lineHeight: 1
+    letterSpacing: "-0.03em"
   promise-title:
     fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
     fontSize: "19px"
     fontWeight: 900
     lineHeight: 1.2
-    letterSpacing: "-0.01em"
+    letterSpacing: "0"
   small:
     fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
     fontSize: "15px"
