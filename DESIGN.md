@@ -317,7 +317,7 @@ Mostly flat, with depth carried by the ground change (navy to cream), two soft n
 ### Shadow Vocabulary
 - **Card lift** (`box-shadow: 0 24px 50px -24px rgba(5,12,22,.7)`): the quote card; daylight floating on dusk.
 - **Button press-in shadow** (`box-shadow: 0 8px 18px -10px rgba(6,14,24,.55)`): primary button only.
-- **Focus halo** (`box-shadow: 0 0 0 4px rgba(47,106,168,.22)`): inputs on focus, with the border turning `orange`.
+- **Focus halo** (`box-shadow: 0 0 0 4px rgba(47,106,168,.22)`): inputs on focus, with the border turning `hover-blue`.
 - **Scene shadow** (`text-shadow: 0 2px 6px` in `scene-shadow`): the hero headline and pitch only, so they hold over the canopy, roof and siding. Not for type on flat grounds.
 - **Frosted bar** (top bar `rgba(22,38,58,.88)` + 10px blur; thumb bar `rgba(15,28,43,.92)` + 12px blur).
 
