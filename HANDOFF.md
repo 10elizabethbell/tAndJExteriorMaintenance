@@ -55,3 +55,8 @@ Replaced the slab + desktop picker card with the tree/house/driveway scene. The 
 
 ## Quote form: text only (Ellie, 2026-10-08)
 Email send button removed: too many options. The form now sends by text only (`sms:` with the composed message); "Copy the message" and "Or just call" stay as fallbacks. The email address is still in the footer. **Confirm with the owner that (732) 644-6757 takes texts**; if it doesn't, the single send button should become email or call.
+
+## Before & after section (Ellie, 2026-10-08)
+New navy section between Services and the quote form: two drag sliders (driveway, trash bin) built from two before/after composites Ellie supplied as T&J's work. Originals and crops live in `src-assets/work/` (git-ignored); the page embeds 640px WebP crops (q78, ~155KB total) that load only near the viewport. The driveway "before" is shifted 16px to line up with the "after"; the bin shots are framed differently, so the line shows a small jump. Top strip of the bin shots trimmed (vehicle parts).
+- **Confirm with the owner:** that both jobs are theirs, and whether trash-bin cleaning is a service they offer (it's not in their published list; the caption only says "Washed out").
+- More pairs slot in by copying one `<figure class="ba-card">` and adding two `<script type="text/plain" id="img-...">` blocks at the end of the page.
