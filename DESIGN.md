@@ -19,6 +19,7 @@ colors:
   field-line: "#8f8676"
   field-fill: "#fffdf8"
   error: "#a3361b"
+  hover-blue: "#2f6aa8"
   error-line: "#c4502a"
   rust-text: "#9c3f1d"
   placeholder: "#6d7480"

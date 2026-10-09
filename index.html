@@ -23,6 +23,7 @@
   --rust:#b5502a;
   --gold:#e6b44a;
   --mist:#cfe3f0;
+  --hover-blue:#2f6aa8; /* form hover outline */
   --text-on-dark:#f3eee5;
   --muted-on-dark:#b7c3d1;
   --muted-on-light:#4f5b69;
@@ -148,6 +149,11 @@ section{position:relative}
 .err{display:none;margin-top:8px;color:#a3361b;font-weight:700;font-size:15px}
 .bad .err{display:block}
 .bad input,.bad select{border-color:#c4502a}
+@media (hover:hover){
+  .quote input[type=text]:hover,.quote input[type=tel]:hover,.quote select:hover,.quote textarea:hover,.chip:hover input:not(:checked)+span{border-color:var(--hover-blue)}
+  .chip:hover input:checked+span,.quote .btn:hover,.quote .after a:hover,.quote .after button:hover{outline:2px solid var(--hover-blue);outline-offset:2px}
+  .quote .after a:hover,.quote .after button:hover{border-radius:10px}
+}
 .photos{margin-top:20px;display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:14px;background:var(--cream-2);font-size:15px;color:#3a4552}
 .photos svg{color:var(--rust);margin-top:2px}
 .send{display:grid;gap:12px;margin-top:20px}
