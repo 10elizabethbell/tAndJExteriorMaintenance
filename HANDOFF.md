@@ -42,7 +42,7 @@
 - A small "your town" detector line ("Serving Brick") from the form's town choice.
 
 ## Not verified
-- Real-device touch on iOS/Android and inside Facebook's in-app browser (headless touch sweep passed).
+- Real-device touch on Android and inside Facebook's in-app browser. iPhone browser checked by Ellie 2026-10-09: washing holds (the address bar sliding away used to rebuild the scene and reset the gunk; pull-to-refresh is now off).
 - SMS handoff with the pre-filled body on iOS and Android (the `?&body=` form is used for both).
 - Frame rate on older phones (phone uses 16 hero leaves, half-res slab layers).
 - Clipboard copy inside the FB in-app browser (fallback shows the message to select by hand).
