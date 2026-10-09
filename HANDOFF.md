@@ -52,3 +52,6 @@ One Impeccable finish review (verdict: fix). Applied: driveway read of the slab,
 
 ## Hero v2 (Ellie's sketch)
 Replaced the slab + desktop picker card with the tree/house/driveway scene. The picker card is gone because the house now fills the desktop hero's right half; service rows below still preselect the quote form.
+
+## Quote form: text only (Ellie, 2026-10-08)
+Email send button removed: too many options. The form now sends by text only (`sms:` with the composed message); "Copy the message" and "Or just call" stay as fallbacks. The email address is still in the footer. **Confirm with the owner that (732) 644-6757 takes texts**; if it doesn't, the single send button should become email or call.

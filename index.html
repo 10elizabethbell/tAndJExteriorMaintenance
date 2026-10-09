@@ -154,8 +154,6 @@ section{position:relative}
 .send{display:grid;gap:12px;margin-top:20px}
 .send .desk{display:none}
 @media (hover:hover) and (pointer:fine){
-  #sendMail{order:-1;background:var(--orange);color:var(--navy)}
-  #sendText{background:transparent;color:var(--ink)}
   .send .mob{display:none}.send .desk{display:inline}
 }
 .send .btn-ghost{background:transparent;color:var(--ink)}
@@ -167,7 +165,6 @@ section{position:relative}
 @media (min-width:900px){
   .q-grid{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
   .quote{margin-top:0;padding:34px 34px 34px}
-  .send{grid-template-columns:1fr 1fr}
 }
 
 /* ===== Area + promises ===== */
@@ -366,7 +363,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
       <div class="send">
         <a class="btn btn-primary" id="sendText" href="sms:+17326446757"><svg class="i"><use href="#i-msg"/></svg><span class="mob">Send by text</span><span class="desk">Text (732) 644-6757</span></a>
-        <a class="btn btn-ghost" id="sendMail" href="mailto:tjexteriormaintenance@gmail.com"><svg class="i"><use href="#i-mail"/></svg>Send by email</a>
       </div>
       <div class="after">
         <button type="button" id="copyMsg">Copy the message</button>
@@ -1150,7 +1146,7 @@ function LeafField(canvas, opts){
 (function(){
   var form = document.getElementById('quoteForm');
   var name = document.getElementById('q-name'), phone = document.getElementById('q-phone'), town = document.getElementById('q-town'), notes = document.getElementById('q-notes');
-  var sendText = document.getElementById('sendText'), sendMail = document.getElementById('sendMail'), ticket = document.getElementById('ticket');
+  var sendText = document.getElementById('sendText'), ticket = document.getElementById('ticket');
   var boxes = Array.prototype.slice.call(form.querySelectorAll('input[name=svc]'));
 
   function services(){ return boxes.filter(function(b){ return b.checked; }).map(function(b){ return b.getAttribute('data-label').replace('&amp;', '&'); }); }
@@ -1166,7 +1162,6 @@ function LeafField(canvas, opts){
   function update(){
     var m = message();
     sendText.href = 'sms:' + BIZ.phone + '?&body=' + encodeURIComponent(m);
-    sendMail.href = 'mailto:' + BIZ.email + '?subject=' + encodeURIComponent('Free quote request' + (town.value ? ' – ' + town.value : '')) + '&body=' + encodeURIComponent(m);
     window.__quoteMsg = m;
   }
   function setBad(id, bad){ document.getElementById(id).classList.toggle('bad', bad); }
@@ -1185,11 +1180,11 @@ function LeafField(canvas, opts){
   });
   form.addEventListener('change', update);
   form.addEventListener('submit', function(e){ e.preventDefault(); });
-  [sendText, sendMail].forEach(function(a){
+  [sendText].forEach(function(a){
     a.addEventListener('click', function(e){
       update();
       if (!validate()) { e.preventDefault(); return; }
-      ticket.textContent = 'Opening your ' + (a === sendText ? 'messages' : 'email') + ' app with this message. Attach your photos, then send:\n\n' + message();
+      ticket.textContent = 'Opening your messages app with this message. Attach your photos, then send:\n\n' + message();
       ticket.classList.add('show');
     });
   });
