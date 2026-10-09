@@ -20,7 +20,7 @@
 ## Placeholders and gaps
 - **No real photos.** Their site's images are AI-generated (the "before/after" pairs don't match; the hero's wand floats). Not used. The washable slab is the before/after for now.
 - Group post photo (fbid 122130093627341401) couldn't be fetched: Facebook needs a login.
-- No logo: set as a "T&J / Exterior Maintenance" wordmark.
+- No logo: set as a "T&J / Exterior Maintenance" wordmark. The favicon and home-screen icon are the orange "T&J" from that wordmark on navy (2026-10-09); their lovable.app favicon is Lovable's default heart, not a logo. Swap in a real logo if they have one.
 - Owner name, years in business, address: unknown, not shown.
 - `src-assets/lovable/` holds their site's images for reference only (ignored by git).
 
